@@ -1,0 +1,28 @@
+<section class="section faq" id="faq">
+  <div class="container faq-wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Dúvidas frequentes</span>
+
+      <h2>Perguntas sobre dedetização em {{ bairro.nome }}.</h2>
+
+      <p class="lead">
+        Veja respostas rápidas antes de chamar a equipe pelo WhatsApp.
+      </p>
+    </div>
+
+    <div class="faq-list reveal">
+      {% for item in bairro.faq %}
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>{{ item.pergunta }}</span>
+            <span>+</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>{{ item.resposta }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

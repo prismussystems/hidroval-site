@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  {% include "partials/head.njk" %}
+</head>
+
+<body>
+  {% include "partials/topbar.njk" %}
+  {% include "partials/header.njk" %}
+  {% include "partials/mobile-menu.njk" %}
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+  {% include "partials/whatsapp-floating.njk" %}
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

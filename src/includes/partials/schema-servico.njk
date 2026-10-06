@@ -1,0 +1,18 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "{{ site.url }}/{{ servico.slug }}/#service",
+  "name": "{{ servico.nome }}",
+  "serviceType": "Controle de pragas",
+  "provider": {
+    "@id": "{{ site.url }}/#localbusiness"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "São Paulo"
+  },
+  "url": "{{ site.url }}/{{ servico.slug }}/",
+  "description": "{{ servico.metaDescription }}"
+}
+</script>

@@ -1,0 +1,11 @@
+---
+pagination:
+  data: servicos
+  size: 1
+  alias: servico
+permalink: "{{ servico.slug }}/index.html"
+layout: layouts/pagina-servico.njk
+eleventyComputed:
+  title: "{{ servico.title }}"
+  description: "{{ servico.metaDescription }}"
+---

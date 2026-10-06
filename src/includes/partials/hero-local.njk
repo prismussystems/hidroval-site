@@ -1,0 +1,71 @@
+<section class="local-hero" id="inicio" data-bg="{{ bairro.textoDecorativo }}">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <span class="local-tag">
+        <i></i> {{ bairro.tag or "Atendimento disponível na região" }}
+      </span>
+
+      <h1>{{ bairro.h1 }}</h1>
+
+      <p class="lead">
+        {{ bairro.heroTexto }}
+      </p>
+
+      <div class="hero-actions">
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/{{ site.whatsapp }}?text={{ bairro.whatsappMensagem | urlencode }}"
+          target="_blank"
+          rel="noopener"
+        >
+          {{ bairro.ctaPrincipal or "Receber atendimento rápido" }}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+
+        <a class="btn btn-outline" href="#cobertura">
+          {{ bairro.ctaSecundario or "Ver região atendida" }}
+        </a>
+      </div>
+
+      <div class="hero-proof">
+        <span><b>✓</b> {{ site.experiencia }}</span>
+        <span><b>✓</b> Atendimento 24h</span>
+        <span><b>✓</b> Residencial e comercial</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="hero-image">
+        <img
+          src="{{ bairro.heroImagem or '/assets/img/hero-controle-pragas.webp' }}"
+          alt="Controle de pragas em {{ bairro.nome }}"
+        >
+      </div>
+
+      <div class="coverage-stamp">
+        <div>
+          <strong>{{ bairro.nome }}</strong>
+          <span>e bairros próximos</span>
+        </div>
+      </div>
+
+      <div class="local-card">
+        <div class="mini-map">
+          <svg viewBox="0 0 260 260" fill="none" aria-hidden="true">
+            <path d="M30 62c52 15 93 8 124-22 28 35 55 55 86 61M18 156c43-18 85-16 126 7 42-23 79-28 111-14M74 20c-5 45 7 84 36 118 24 27 31 61 22 102M174 17c14 42 8 79-16 112-27 37-29 74-6 111" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+            <circle cx="137" cy="130" r="55" stroke="rgba(211,237,72,.75)" stroke-width="2" stroke-dasharray="7 8"/>
+          </svg>
+          <span class="mini-pin"></span>
+        </div>
+
+        <div class="local-card-copy">
+          <small>Cobertura local</small>
+          <h3>Atendimento em {{ bairro.nome }}</h3>
+          <p>Informe sua rua, condomínio ou ponto de referência para confirmar a disponibilidade da equipe.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

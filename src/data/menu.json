@@ -1,0 +1,28 @@
+{
+    "institucional": [
+        {
+            "label": "Início",
+            "url": "/"
+        },
+        {
+            "label": "Sobre",
+            "url": "/sobre/"
+        },
+        {
+            "label": "Serviços",
+            "url": "/servicos/"
+        },
+        {
+            "label": "Onde atendemos",
+            "url": "/onde-atendemos/"
+        },
+        {
+            "label": "Contato",
+            "url": "/contato/"
+        }
+    ],
+    "cta": {
+        "label": "Receber atendimento rápido",
+        "url": "https://wa.me/5511947701899?text=Olá%2C%20gostaria%20de%20receber%20atendimento%20rápido%20para%20controle%20de%20pragas."
+    }
+}

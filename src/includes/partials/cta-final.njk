@@ -1,0 +1,22 @@
+<section class="final-cta" data-bg="{{ bairro.textoDecorativo }}">
+  <div class="container cta-grid">
+    <div>
+      <h2>Precisa de uma dedetizadora em {{ bairro.nome }} agora?</h2>
+
+      <p>
+        Não espere a infestação aumentar. Fale com a ImuniziPrag Dedetização pelo WhatsApp, informe sua rua ou ponto de referência em {{ bairro.nome }} e receba orientação para o controle de pragas no seu imóvel.
+      </p>
+    </div>
+
+    <div>
+      <a
+        class="btn btn-primary"
+        href="https://wa.me/{{ site.whatsapp }}?text={{ bairro.whatsappMensagem | urlencode }}"
+        target="_blank"
+        rel="noopener"
+      >
+        Receber atendimento rápido
+      </a>
+    </div>
+  </div>
+</section>

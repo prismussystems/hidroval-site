@@ -1,0 +1,40 @@
+---
+layout: null
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% set baseUrl = site.url %}
+  {% set staticPages = [
+    { path: "/", priority: 1.0, changefreq: "daily" },
+    { path: "/sobre/", priority: 0.8, changefreq: "monthly" },
+    { path: "/contato/", priority: 0.8, changefreq: "monthly" },
+    { path: "/servicos/", priority: 0.9, changefreq: "weekly" },
+    { path: "/onde-atendemos/", priority: 0.8, changefreq: "weekly" }
+  ] %}
+
+  {% for page in staticPages %}
+  <url>
+    <loc>{{ baseUrl }}{{ page.path }}</loc>
+    <changefreq>{{ page.changefreq }}</changefreq>
+    <priority>{{ page.priority }}</priority>
+  </url>
+  {% endfor %}
+
+  {% for bairro in bairros %}
+  <url>
+    <loc>{{ baseUrl }}/{{ bairro.slug }}/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  {% endfor %}
+
+  {% for servico in servicos %}
+  <url>
+    <loc>{{ baseUrl }}/{{ servico.slug }}/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  {% endfor %}
+</urlset>

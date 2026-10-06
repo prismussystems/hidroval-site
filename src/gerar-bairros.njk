@@ -1,0 +1,11 @@
+---
+pagination:
+  data: bairros
+  size: 1
+  alias: bairro
+permalink: "{{ bairro.slug }}/index.html"
+layout: layouts/pagina-local.njk
+eleventyComputed:
+  title: "{{ bairro.title }}"
+  description: "{{ bairro.metaDescription }}"
+---

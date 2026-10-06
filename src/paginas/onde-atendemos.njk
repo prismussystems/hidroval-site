@@ -1,0 +1,84 @@
+---
+layout: layouts/base.njk
+title: "Onde Atendemos | ImuniziPrag Dedetização"
+description: "Veja as regiões atendidas pela ImuniziPrag Dedetização em São Paulo. Atendimento para residências, condomínios, comércios e empresas."
+permalink: "/onde-atendemos/"
+---
+
+<section class="institutional-page-hero">
+  <div class="container">
+    <span class="eyebrow">Regiões atendidas</span>
+    <h1>Dedetizadora em São Paulo e região</h1>
+    <p class="lead">
+      A ImuniziPrag atende bairros estratégicos de São Paulo com serviços de dedetização, desratização, descupinização e controle profissional de pragas.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Páginas locais</span>
+      <h2>Escolha sua região de atendimento.</h2>
+      <p class="lead">
+        Encontre a página mais próxima da sua região e solicite atendimento pelo WhatsApp.
+      </p>
+    </div>
+
+    <div class="locations-grid">
+      {% for bairro in bairros %}
+        <article class="location-card reveal">
+          <span>{{ bairro.regiao }}</span>
+          <h3>{{ bairro.nome }}</h3>
+          <p>
+            Controle de pragas em {{ bairro.nome }} para residências, condomínios, comércios e empresas.
+          </p>
+
+          <a href="/{{ bairro.slug }}/">
+            Ver página local →
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section institutional-band">
+  <div class="container institutional-split">
+    <div class="reveal">
+      <span class="eyebrow">Atendimento sob consulta</span>
+      <h2>Não encontrou seu bairro?</h2>
+      <p class="lead">
+        A disponibilidade pode variar conforme agenda, urgência e localização. Chame a equipe pelo WhatsApp e informe sua rua ou ponto de referência.
+      </p>
+    </div>
+
+    <div class="institutional-info-card reveal">
+      <strong>Confirme sua região</strong>
+
+      <div>
+        <b>WhatsApp</b>
+        <span>{{ site.telefone }}</span>
+      </div>
+
+      <div>
+        <b>Atendimento</b>
+        <span>{{ site.atendimento }}</span>
+      </div>
+
+      <div>
+        <b>Cidade principal</b>
+        <span>São Paulo/SP</span>
+      </div>
+
+      <a
+        class="btn btn-primary"
+        href="https://wa.me/{{ site.whatsapp }}?text=Olá%2C%20gostaria%20de%20confirmar%20se%20a%20ImuniziPrag%20atende%20meu%20bairro."
+        target="_blank"
+        rel="noopener"
+      >
+        Confirmar atendimento
+      </a>
+    </div>
+  </div>
+</section>

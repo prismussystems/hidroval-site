@@ -1,0 +1,41 @@
+<section class="quote-strip">
+  <div class="container quote-layout">
+    <div class="quote-title">
+      <strong>Solicite uma orientação inicial</strong>
+      <span>O formulário abre uma conversa no WhatsApp.</span>
+    </div>
+
+    <form
+      class="quote-form"
+      id="localForm"
+      data-bairro="{{ bairro.nome }}"
+      data-whatsapp="{{ site.whatsapp }}"
+    >
+      <label for="name">Nome</label>
+      <input id="name" type="text" placeholder="Seu nome" required>
+
+      <label for="street">Rua ou ponto de referência</label>
+      <input id="street" type="text" placeholder="Rua ou ponto de referência" required>
+
+      <label for="problem">Tipo de problema</label>
+      <select id="problem" required>
+        <option value="">Qual é o problema?</option>
+        <option>Baratas</option>
+        <option>Formigas</option>
+        <option>Cupins</option>
+        <option>Ratos</option>
+        <option>Aranhas</option>
+        <option>Pulgas</option>
+        <option>Escorpiões</option>
+        <option>Carrapatos</option>
+        <option>Percevejos de cama</option>
+        <option>Traças</option>
+        <option>Outro</option>
+      </select>
+
+      <button class="btn btn-primary" type="submit">
+        Consultar atendimento
+      </button>
+    </form>
+  </div>
+</section>

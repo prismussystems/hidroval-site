@@ -1,0 +1,281 @@
+---
+layout: layouts/base.njk
+---
+
+{% include "partials/schema-servico.njk" %}
+
+<section class="service-hero" data-bg="{{ servico.textoDecorativo }}">
+  <div class="container service-hero-grid">
+    <div class="service-hero-copy reveal">
+      <span class="local-tag">
+        <i></i> {{ servico.tag or "Serviço especializado" }}
+      </span>
+
+      <h1>{{ servico.h1 }}</h1>
+
+      <p class="lead">
+        {{ servico.heroTexto }}
+      </p>
+
+      <div class="hero-actions">
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/{{ site.whatsapp }}?text={{ servico.whatsappMensagem | urlencode }}"
+          target="_blank"
+          rel="noopener"
+        >
+          {{ servico.ctaPrincipal or "Receber atendimento rápido" }}
+        </a>
+
+        <a class="btn btn-outline" href="#como-funciona">
+          {{ servico.ctaSecundario or "Como funciona" }}
+        </a>
+      </div>
+
+      <div class="hero-proof">
+        <span><b>✓</b> Atendimento residencial e comercial</span>
+        <span><b>✓</b> Orçamento via WhatsApp</span>
+        <span><b>✓</b> Produtos regulamentados</span>
+      </div>
+    </div>
+
+    <div class="service-hero-card reveal">
+      <img
+        src="{{ servico.imagem or '/assets/img/hero-controle-pragas.webp' }}"
+        alt="{{ servico.imagemAlt or servico.h1 }}"
+        width="1024"
+        height="746"
+        loading="eager"
+        fetchpriority="high"
+      >
+
+      <div class="service-hero-badge">
+        <strong>{{ servico.nome }}</strong>
+        <span>Controle profissional de pragas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-strip">
+  <div class="container quote-layout">
+    <div class="quote-title">
+      <strong>Solicite orientação inicial</strong>
+      <span>O formulário abre uma conversa no WhatsApp.</span>
+    </div>
+
+    <form
+      class="quote-form"
+      id="serviceForm"
+      data-servico="{{ servico.nome }}"
+      data-whatsapp="{{ site.whatsapp }}"
+    >
+      <label for="serviceName">Nome</label>
+      <input id="serviceName" type="text" placeholder="Seu nome" required>
+
+      <label for="serviceDistrict">Bairro</label>
+      <input id="serviceDistrict" type="text" placeholder="Seu bairro" required>
+
+      <label for="serviceProperty">Tipo de imóvel</label>
+      <select id="serviceProperty" required>
+        <option value="">Tipo de imóvel</option>
+        <option>Casa</option>
+        <option>Apartamento</option>
+        <option>Condomínio</option>
+        <option>Restaurante</option>
+        <option>Clínica</option>
+        <option>Comércio</option>
+        <option>Empresa</option>
+        <option>Outro</option>
+      </select>
+
+      <button class="btn btn-primary" type="submit">
+        Consultar atendimento
+      </button>
+    </form>
+  </div>
+</section>
+
+<section class="section service-intro">
+  <div class="container intro-grid">
+    <aside class="intro-aside reveal">
+      <strong>Indicado para</strong>
+
+      <div class="local-data">
+        {% for item in servico.indicadoPara %}
+          <div>
+            <i>✓</i>
+            <span>
+              <b>{{ item.titulo }}</b>
+              <span>{{ item.texto }}</span>
+            </span>
+          </div>
+        {% endfor %}
+      </div>
+    </aside>
+
+    <div class="intro-copy reveal">
+      <span class="eyebrow">Sobre o serviço</span>
+
+      <h2>{{ servico.introTitulo }}</h2>
+
+      {% for paragrafo in servico.introParagrafos %}
+        <p>{{ paragrafo }}</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section institutional-band">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Sinais de alerta</span>
+      <h2>{{ servico.sinaisTitulo or "Quando chamar uma dedetizadora?" }}</h2>
+      <p class="lead">
+        {{ servico.sinaisTexto }}
+      </p>
+    </div>
+
+    <div class="institutional-card-grid">
+      {% for sinal in servico.sinais %}
+        <article class="institutional-service-card reveal">
+          <span>{{ loop.index }}</span>
+          <h3>{{ sinal.titulo }}</h3>
+          <p>{{ sinal.texto }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="como-funciona">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Como funciona</span>
+      <h2>{{ servico.processoTitulo or "Como funciona o atendimento?" }}</h2>
+      <p class="lead">
+        {{ servico.processoTexto }}
+      </p>
+    </div>
+
+    <div class="process-list">
+      {% for etapa in servico.etapas %}
+        <div class="step reveal">
+          <div class="step-num">{{ "0" + loop.index if loop.index < 10 else loop.index }}</div>
+          <div>
+            <h3>{{ etapa.titulo }}</h3>
+            <p>{{ etapa.texto }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section service-coverage">
+  <div class="container institutional-split">
+    <div class="reveal">
+      <span class="eyebrow">Onde realizamos</span>
+
+      <h2>{{ servico.locaisTitulo or "Atendimento em residências, condomínios e empresas." }}</h2>
+
+      <p class="lead">
+        {{ servico.locaisTexto }}
+      </p>
+
+      <a
+        class="btn btn-primary"
+        href="https://wa.me/{{ site.whatsapp }}?text={{ servico.whatsappMensagem | urlencode }}"
+        target="_blank"
+        rel="noopener"
+      >
+        Falar com especialista
+      </a>
+    </div>
+
+    <div class="institutional-list reveal">
+      {% for local in servico.locais %}
+        <a href="{{ local.url or '/contato/' }}">{{ local.nome }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section institutional-band">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Regiões atendidas</span>
+
+      <h2>{{ servico.regioesTitulo or "Atendimento em São Paulo e bairros próximos." }}</h2>
+
+      <p class="lead">
+        {{ servico.regioesTexto or "A disponibilidade pode variar conforme agenda, urgência e localização. Informe seu bairro pelo WhatsApp para confirmar o atendimento." }}
+      </p>
+    </div>
+
+    <div class="locations-grid">
+      {% for bairro in bairros | slice(0, 9) %}
+        {% for item in bairro %}
+          <article class="location-card reveal">
+            <span>{{ item.regiao }}</span>
+            <h3>{{ item.nome }}</h3>
+            <p>{{ servico.nome }} em {{ item.nome }} para residências, condomínios, comércios e empresas.</p>
+            <a href="/{{ item.slug }}/">Ver região →</a>
+          </article>
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section faq" id="faq">
+  <div class="container faq-wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Dúvidas frequentes</span>
+
+      <h2>Perguntas sobre {{ servico.nome | lower }}.</h2>
+
+      <p class="lead">
+        Veja respostas rápidas antes de chamar a equipe pelo WhatsApp.
+      </p>
+    </div>
+
+    <div class="faq-list reveal">
+      {% for item in servico.faq %}
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>{{ item.pergunta }}</span>
+            <span>+</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>{{ item.resposta }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="final-cta" data-bg="{{ servico.textoDecorativo }}">
+  <div class="container cta-grid">
+    <div>
+      <h2>{{ servico.ctaFinalTitulo }}</h2>
+
+      <p>
+        {{ servico.ctaFinalTexto }}
+      </p>
+    </div>
+
+    <div>
+      <a
+        class="btn btn-primary"
+        href="https://wa.me/{{ site.whatsapp }}?text={{ servico.whatsappMensagem | urlencode }}"
+        target="_blank"
+        rel="noopener"
+      >
+        Receber atendimento rápido
+      </a>
+    </div>
+  </div>
+</section>

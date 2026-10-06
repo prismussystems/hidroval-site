@@ -1,0 +1,68 @@
+<section class="section local-intro">
+  <div class="container intro-grid">
+    <aside class="intro-aside reveal">
+      <strong>Informações desta página</strong>
+
+      <div class="local-data">
+        <div>
+          <i>⌖</i>
+          <span>
+            <b>Região</b>
+            <span>{{ bairro.nome }}, {{ bairro.regiao }}</span>
+          </span>
+        </div>
+
+        <div>
+          <i>⌂</i>
+          <span>
+            <b>Imóveis atendidos</b>
+            <span>Casas, apartamentos, condomínios, restaurantes, clínicas, comércios e empresas</span>
+          </span>
+        </div>
+
+        <div>
+          <i>◷</i>
+          <span>
+            <b>Disponibilidade</b>
+            <span>Atendimento informado 24 horas</span>
+          </span>
+        </div>
+
+        <div>
+          <i>☎</i>
+          <span>
+            <b>Contato</b>
+            <span>{{ site.telefone }}</span>
+          </span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="intro-copy reveal">
+      <span class="eyebrow">Atendimento no bairro</span>
+
+      <h2>{{ bairro.introTitulo }}</h2>
+
+      {% for paragrafo in bairro.introParagrafos %}
+        <p>{{ paragrafo }}</p>
+      {% endfor %}
+
+      <div class="local-highlights">
+        <div class="highlight">
+          <strong>15+</strong>
+          <span>anos de experiência informados pela empresa</span>
+        </div>
+
+        <div class="highlight">
+          <strong>24h</strong>
+          <span>canal de atendimento durante toda a semana</span>
+        </div>
+
+        <div class="highlight">
+          <strong>Local</strong>
+          <span>orçamento direcionado para {{ bairro.nome }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
