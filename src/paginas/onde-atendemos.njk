@@ -1,13 +1,12 @@
 ---
 layout: layouts/base.njk
 title: "Onde Atendemos | Hidroval Caça Vazamento"
-description: "Veja as regiões atendidas pela Hidroval Caça Vazamento em [CIDADE]. Detecção de vazamentos para residências, condomínios, comércios e empresas."
+description: "Veja as regiões atendidas pela Hidroval Caça Vazamento em São Paulo. Detecção de vazamentos para residências, condomínios, comércios e empresas."
 permalink: "/onde-atendemos/"
 ---
 
 <section class="institutional-page-hero">
   <div class="container">
-    <span class="eyebrow">Regiões atendidas</span>
     <h1>Caça vazamento em {{ site.cidade }} e região</h1>
     <p class="lead">
       A {{ site.empresa }} atende bairros de {{ site.cidade }} com detecção de vazamento por geofone, vazamento em piscina, caixa d'água, parede e piso.
@@ -18,7 +17,6 @@ permalink: "/onde-atendemos/"
 <section class="section">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Páginas locais</span>
       <h2>Escolha sua região de atendimento.</h2>
       <p class="lead">
         Encontre a página mais próxima da sua região e solicite atendimento pelo WhatsApp.
@@ -31,7 +29,7 @@ permalink: "/onde-atendemos/"
           <span>{{ bairro.regiao }}</span>
           <h3>{{ bairro.nome }}</h3>
           <p>
-            Detecção de vazamento em {{ bairro.nome }} para residências, condomínios, comércios e empresas.
+            Detecção de vazamento {{ bairro.em or "em" }} {{ bairro.nome }} para residências, condomínios, comércios e empresas.
           </p>
 
           <a href="/{{ bairro.slug }}/">
@@ -46,7 +44,6 @@ permalink: "/onde-atendemos/"
 <section class="section institutional-band">
   <div class="container institutional-split">
     <div class="reveal">
-      <span class="eyebrow">Atendimento sob consulta</span>
       <h2>Não encontrou seu bairro?</h2>
       <p class="lead">
         A disponibilidade pode variar conforme agenda, urgência e localização. Chame a equipe pelo WhatsApp e informe sua rua ou ponto de referência.

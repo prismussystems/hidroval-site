@@ -119,7 +119,6 @@ layout: layouts/base.njk
     </aside>
 
     <div class="intro-copy reveal">
-      <span class="eyebrow">Sobre o serviço</span>
 
       <h2>{{ servico.introTitulo }}</h2>
 
@@ -133,7 +132,6 @@ layout: layouts/base.njk
 <section class="section institutional-band">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Sinais de alerta</span>
       <h2>{{ servico.sinaisTitulo or "Quando chamar um caça vazamento?" }}</h2>
       <p class="lead">
         {{ servico.sinaisTexto }}
@@ -179,7 +177,6 @@ layout: layouts/base.njk
 <section class="section service-coverage">
   <div class="container institutional-split">
     <div class="reveal">
-      <span class="eyebrow">Onde realizamos</span>
 
       <h2>{{ servico.locaisTitulo or "Atendimento em residências, condomínios e empresas." }}</h2>
 
@@ -208,7 +205,6 @@ layout: layouts/base.njk
 <section class="section institutional-band">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Regiões atendidas</span>
 
       <h2>{{ servico.regioesTitulo or "Atendimento em " + site.cidade + " e bairros próximos." }}</h2>
 
@@ -223,7 +219,7 @@ layout: layouts/base.njk
           <article class="location-card reveal">
             <span>{{ item.regiao }}</span>
             <h3>{{ item.nome }}</h3>
-            <p>{{ servico.nome }} em {{ item.nome }} para residências, condomínios, comércios e empresas.</p>
+            <p>{{ servico.nome }} {{ item.em or "em" }} {{ item.nome }} para residências, condomínios, comércios e empresas.</p>
             <a href="/{{ item.slug }}/">Ver região →</a>
           </article>
         {% endfor %}

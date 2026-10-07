@@ -1,9 +1,8 @@
 <section class="section coverage" id="cobertura">
   <div class="container coverage-grid">
     <div class="coverage-copy reveal">
-      <span class="eyebrow">Região atendida</span>
 
-      <h2>Caça vazamento em {{ bairro.nome }} e bairros próximos.</h2>
+      <h2>Caça vazamento {{ bairro.em or "em" }} {{ bairro.nome }} e bairros próximos.</h2>
 
       <p class="lead">
         A {{ site.empresa }} atende {{ bairro.nome }} e outras regiões de {{ site.cidade }} com detecção de vazamentos para imóveis residenciais, condomínios, comércios e empresas.

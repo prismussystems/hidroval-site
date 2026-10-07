@@ -11,6 +11,8 @@
       --line:#DDE3EA;
       --soft:#F4F6F9;
       --tint:#E9EEF4;
+      /* Exceção funcional: cor oficial do WhatsApp, só nos botões do WhatsApp */
+      --whatsapp:#25D366;
       --font-title:"Montserrat","Segoe UI",sans-serif;
       --font-body:"Roboto",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
       --shadow:0 24px 70px rgba(2,41,95,.14);
@@ -40,37 +42,28 @@
     h1,h2,h3{
       color:var(--heading,var(--navy));
       font-family:var(--font-title);font-weight:800;
-      line-height:0.98;
+      line-height:1.15;
       letter-spacing:-.02em;
     }
     h1{
       margin:18px 0 24px;
-      font-size:clamp(3rem,6vw,6rem);
-      text-transform:uppercase;
+      font-size:clamp(2rem,4vw,3.25rem);
+      line-height:1.1;
     }
     h2{
       margin:15px 0 20px;
-      font-size:clamp(2.25rem,4.5vw,4.55rem);
-      text-transform:uppercase;
+      font-size:clamp(1.75rem,3vw,2.5rem);
+      line-height:1.15;
     }
     h3{font-size:1.45rem;margin-bottom:10px}
     .lead{color:var(--muted);font-size:clamp(1.04rem,1.4vw,1.2rem);max-width:700px}
     .eyebrow{
       display:inline-flex;
       align-items:center;
-      gap:9px;
-      color:var(--royal);
-      font-size:.75rem;
-      line-height:1;
-      font-weight:900;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-    }
-    .eyebrow:before{
-      content:"";
-      width:28px;height:3px;
-      border-radius:99px;
-      background:var(--cyan);
+      color:var(--muted);
+      font-size:.9rem;
+      line-height:1.3;
+      font-weight:500;
     }
     .btn{
       display:inline-flex;
@@ -555,8 +548,8 @@
     .floating-wa{
       position:fixed;right:22px;bottom:22px;z-index:50;
       display:flex;min-height:57px;align-items:center;gap:10px;
-      padding:0 18px;border-radius:999px;color:var(--white);background:var(--royal);
-      box-shadow:0 14px 38px rgba(2,58,138,.32);font-weight:900;
+      padding:0 18px;border-radius:999px;color:var(--navy);background:var(--whatsapp);
+      box-shadow:0 14px 38px rgba(2,41,95,.28);font-weight:900;
     }
     .floating-wa svg{width:22px;height:22px}
     .mobile-bottom{display:none}
@@ -588,8 +581,8 @@
       .brand{width:150px}
       .nav-actions>.btn{display:none}
       .mobile-menu{inset:110px 0 0}
-      h1{font-size:clamp(2rem,8.6vw,4.7rem)}
-      h2{font-size:clamp(1.8rem,8.2vw,3.7rem)}
+      h1,.institutional-hero-copy h1,.institutional-page-hero h1,.service-hero-copy h1{font-size:clamp(1.75rem,7vw,2rem)}
+      h2{font-size:clamp(1.5rem,6vw,1.75rem)}
       .breadcrumb .container{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
       .hero-grid{min-height:auto;gap:38px;padding:50px 0 68px}
       .hero-visual{min-height:530px}
@@ -624,7 +617,7 @@
         border-radius:11px;font-size:.82rem;font-weight:900;
       }
       .mobile-bottom a:first-child{color:white;background:var(--navy)}
-      .mobile-bottom a:last-child{margin-left:7px;color:var(--white);background:var(--royal)}
+      .mobile-bottom a:last-child{margin-left:7px;color:var(--navy);background:var(--whatsapp)}
     }
     @media(max-width:460px){
       .hero-actions .btn{width:100%}
@@ -662,8 +655,8 @@
 .institutional-hero-copy h1,
 .institutional-page-hero h1 {
   margin: 18px 0 24px;
-  font-size: clamp(3rem, 6vw, 6rem);
-  text-transform: uppercase;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.1;
 }
 
 .institutional-hero-card {
@@ -983,10 +976,9 @@
 
 .service-hero-copy h1 {
   margin: 18px 0 24px;
-  font-size: clamp(3rem, 6vw, 5.8rem);
-  line-height: .88;
-  letter-spacing: -.06em;
-  text-transform: uppercase;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.1;
+  letter-spacing: -.02em;
 }
 
 .service-hero-card {
@@ -1099,4 +1091,4 @@
 .location-card:hover{border-color:var(--cyan)}
 .institutional-service-card h3 a:hover{text-decoration:underline;text-decoration-color:var(--cyan);text-decoration-thickness:3px}
 .institutional-split .card-photo{max-width:520px;margin-top:12px}
-h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
+h1,h2,h3{hyphens:none;word-break:normal;overflow-wrap:normal}

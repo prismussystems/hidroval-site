@@ -1,193 +1,210 @@
 [
   {
-    "nome": "[BAIRRO 1]",
-    "slug": "caca-vazamento-bairro-1",
-    "regiao": "[CIDADE]",
-    "title": "Caça Vazamento em [BAIRRO 1], [CIDADE] | Hidroval",
-    "metaDescription": "Caça vazamento em [BAIRRO 1], [CIDADE]: detecção com geofone e sem quebra-quebra para casas, apartamentos, condomínios e empresas. Orçamento pelo WhatsApp.",
-    "h1": "Caça Vazamento em [BAIRRO 1]",
-    "tag": "Atendimento disponível na região",
-    "textoDecorativo": "BAIRRO 1",
-    "heroTexto": "Conta de água alta, manchas na parede, piscina perdendo água ou hidrômetro girando sem parar? A Hidroval Caça Vazamento atende [BAIRRO 1] com detecção de vazamentos por geofone e sem quebra-quebra.",
+    "nome": "Moema",
+    "slug": "caca-vazamento-moema",
+    "regiao": "Zona Sul de São Paulo",
+    "title": "Caça Vazamento em Moema, São Paulo | Hidroval",
+    "metaDescription": "Caça vazamento em Moema: detecção com geofone em apartamentos, coberturas e sobrados, sem quebrar porcelanato. Atendimento a condomínios. Orçamento pelo WhatsApp.",
+    "h1": "Caça Vazamento em Moema",
+    "tag": "Apartamentos, coberturas e sobrados",
+    "textoDecorativo": "MOEMA",
+    "heroTexto": "Em Moema, a maioria dos vazamentos acontece em apartamentos e coberturas, onde a água de uma unidade aparece no teto do vizinho de baixo. A Hidroval localiza o ponto exato com geofone e evita quebrar porcelanatos e pisos de alto padrão.",
     "ctaPrincipal": "Pedir orçamento",
     "ctaSecundario": "Ver região atendida",
-    "whatsappMensagem": "Olá! Vim pelo site, estou em [BAIRRO 1] e preciso de um caça vazamento.",
-    "introTitulo": "Detecção de vazamento em [BAIRRO 1] com atendimento local.",
+    "whatsappMensagem": "Olá! Vim pelo site, estou em Moema e preciso de um caça vazamento.",
+    "introTitulo": "Vazamento em prédio exige precisão, não tentativa e erro.",
     "introParagrafos": [
-      "Casas, apartamentos, condomínios e comércios de [BAIRRO 1] podem ter vazamentos escondidos em tubulações embutidas, enterradas ou em reservatórios.",
-      "Muitas vezes o primeiro sinal é a conta de água mais alta, uma mancha que não sai ou o hidrômetro girando mesmo com tudo fechado.",
-      "A Hidroval atende [BAIRRO 1] com equipamentos de detecção para localizar o ponto exato do vazamento e evitar quebras desnecessárias."
+      "Moema é um dos bairros mais verticalizados da Zona Sul, com muitos edifícios residenciais, coberturas com piscina e, nas ruas de Moema Pássaros e Moema Índios, sobrados e casas reformadas.",
+      "Em apartamento, a mancha no teto nem sempre vem do banheiro de cima. A água pode vir de prumadas, ralos, ligações de máquina de lavar ou da tubulação de água quente. Descobrir a origem certa evita discussão entre vizinhos e obras na unidade errada.",
+      "A Hidroval faz testes de pressão e varredura com geofone para apontar onde está o vazamento, com abertura mínima no revestimento. Também atendemos síndicos e administradoras para vazamentos em áreas comuns, barriletes e reservatórios."
     ],
     "bairrosProximos": [
       {
-        "nome": "[BAIRRO 2]",
-        "url": "/caca-vazamento-bairro-2/"
+        "nome": "Vila Nova Conceição",
+        "url": "/onde-atendemos/"
       },
       {
-        "nome": "[BAIRRO 3]",
-        "url": "/caca-vazamento-bairro-3/"
+        "nome": "Campo Belo",
+        "url": "/onde-atendemos/"
       },
       {
-        "nome": "[BAIRRO 4]",
-        "url": "/caca-vazamento-bairro-4/"
+        "nome": "Indianópolis",
+        "url": "/onde-atendemos/"
+      },
+      {
+        "nome": "Brooklin",
+        "url": "/onde-atendemos/"
       }
     ],
     "faq": [
       {
-        "pergunta": "A Hidroval atende em [BAIRRO 1]?",
-        "resposta": "Sim. Atendemos [BAIRRO 1] e bairros próximos em [CIDADE]. Informe sua rua pelo WhatsApp para confirmar a disponibilidade."
+        "pergunta": "A mancha no meu teto pode vir do apartamento de cima?",
+        "resposta": "Pode, mas nem sempre. Prumadas e tubulações do próprio prédio também causam manchas. A detecção indica de onde a água está vindo antes de qualquer quebra."
       },
       {
-        "pergunta": "Como pedir orçamento?",
-        "resposta": "Chame pelo WhatsApp, informe o bairro, o tipo de imóvel e os sinais que percebeu para receber a orientação inicial."
+        "pergunta": "Vocês atendem coberturas com piscina em Moema?",
+        "resposta": "Sim. Investigamos perda de água na piscina, na casa de máquinas e nas tubulações da cobertura, que costumam causar infiltração no andar de baixo."
       },
       {
-        "pergunta": "Qual o horário de atendimento?",
-        "resposta": "Atendemos [HORÁRIO]. A disponibilidade pode variar conforme a agenda e a localização."
+        "pergunta": "Atendem condomínios e administradoras?",
+        "resposta": "Sim. Fazemos a detecção em áreas comuns, garagens, barriletes e reservatórios. Fale pelo WhatsApp para combinar a visita com o zelador ou síndico."
       }
     ]
   },
   {
-    "nome": "[BAIRRO 2]",
-    "slug": "caca-vazamento-bairro-2",
-    "regiao": "[CIDADE]",
-    "title": "Caça Vazamento em [BAIRRO 2], [CIDADE] | Hidroval",
-    "metaDescription": "Caça vazamento em [BAIRRO 2], [CIDADE]: detecção com geofone e sem quebra-quebra para casas, apartamentos, condomínios e empresas. Orçamento pelo WhatsApp.",
-    "h1": "Caça Vazamento em [BAIRRO 2]",
-    "tag": "Atendimento disponível na região",
-    "textoDecorativo": "BAIRRO 2",
-    "heroTexto": "Conta de água alta, manchas na parede, piscina perdendo água ou hidrômetro girando sem parar? A Hidroval Caça Vazamento atende [BAIRRO 2] com detecção de vazamentos por geofone e sem quebra-quebra.",
+    "nome": "Pinheiros",
+    "slug": "caca-vazamento-pinheiros",
+    "regiao": "Zona Oeste de São Paulo",
+    "title": "Caça Vazamento em Pinheiros, São Paulo | Hidroval",
+    "metaDescription": "Caça vazamento em Pinheiros: detecção em casas antigas, prédios novos, comércios e restaurantes, sem quebra-quebra. Orçamento pelo WhatsApp.",
+    "h1": "Caça Vazamento em Pinheiros",
+    "tag": "Casas antigas, prédios novos e comércios",
+    "textoDecorativo": "PINHEIROS",
+    "heroTexto": "Pinheiros mistura sobrados antigos com encanamento original, prédios recém-construídos e muito comércio. A Hidroval localiza vazamentos em cada um desses cenários sem quebrar o imóvel à procura do problema.",
     "ctaPrincipal": "Pedir orçamento",
     "ctaSecundario": "Ver região atendida",
-    "whatsappMensagem": "Olá! Vim pelo site, estou em [BAIRRO 2] e preciso de um caça vazamento.",
-    "introTitulo": "Detecção de vazamento em [BAIRRO 2] com atendimento local.",
+    "whatsappMensagem": "Olá! Vim pelo site, estou em Pinheiros e preciso de um caça vazamento.",
+    "introTitulo": "Encanamento antigo e obra nova pedem cuidados diferentes.",
     "introParagrafos": [
-      "Casas, apartamentos, condomínios e comércios de [BAIRRO 2] podem ter vazamentos escondidos em tubulações embutidas, enterradas ou em reservatórios.",
-      "Muitas vezes o primeiro sinal é a conta de água mais alta, uma mancha que não sai ou o hidrômetro girando mesmo com tudo fechado.",
-      "A Hidroval atende [BAIRRO 2] com equipamentos de detecção para localizar o ponto exato do vazamento e evitar quebras desnecessárias."
+      "Nas ruas mais antigas de Pinheiros ainda há muitos sobrados e casas com tubulação de ferro galvanizado. Com o tempo, esse encanamento corrói por dentro e passa a vazar em pontos escondidos sob o piso e nas paredes.",
+      "Ao mesmo tempo, o bairro ganhou muitos edifícios novos nos últimos anos. Em obra recente, vazamentos costumam aparecer em conexões mal vedadas e em ligações de água quente, às vezes ainda dentro do prazo da construtora.",
+      "Para restaurantes, bares e lojas da região, um vazamento significa conta alta e risco de parar o atendimento. A Hidroval localiza o ponto com geofone e combina horários que atrapalhem o mínimo a operação."
     ],
     "bairrosProximos": [
       {
-        "nome": "[BAIRRO 1]",
-        "url": "/caca-vazamento-bairro-1/"
+        "nome": "Vila Madalena",
+        "url": "/onde-atendemos/"
       },
       {
-        "nome": "[BAIRRO 3]",
-        "url": "/caca-vazamento-bairro-3/"
+        "nome": "Alto de Pinheiros",
+        "url": "/onde-atendemos/"
       },
       {
-        "nome": "[BAIRRO 4]",
-        "url": "/caca-vazamento-bairro-4/"
+        "nome": "Jardim Paulistano",
+        "url": "/onde-atendemos/"
+      },
+      {
+        "nome": "Butantã",
+        "url": "/onde-atendemos/"
       }
     ],
     "faq": [
       {
-        "pergunta": "A Hidroval atende em [BAIRRO 2]?",
-        "resposta": "Sim. Atendemos [BAIRRO 2] e bairros próximos em [CIDADE]. Informe sua rua pelo WhatsApp para confirmar a disponibilidade."
+        "pergunta": "Minha casa é antiga. Vale a pena procurar o vazamento sem quebrar?",
+        "resposta": "Sim. Em casas antigas, a tubulação passa por caminhos difíceis de prever. Localizar o ponto antes evita abrir paredes e pisos inteiros."
       },
       {
-        "pergunta": "Como pedir orçamento?",
-        "resposta": "Chame pelo WhatsApp, informe o bairro, o tipo de imóvel e os sinais que percebeu para receber a orientação inicial."
+        "pergunta": "Vocês atendem restaurantes e comércios em Pinheiros?",
+        "resposta": "Sim. Podemos combinar o atendimento antes da abertura ou depois do fechamento, para não interromper o funcionamento."
       },
       {
-        "pergunta": "Qual o horário de atendimento?",
-        "resposta": "Atendemos [HORÁRIO]. A disponibilidade pode variar conforme a agenda e a localização."
+        "pergunta": "Meu apartamento é novo e já tem vazamento. O que fazer?",
+        "resposta": "A detecção identifica o ponto exato e ajuda a documentar o problema, o que é útil se você for acionar a construtora."
       }
     ]
   },
   {
-    "nome": "[BAIRRO 3]",
-    "slug": "caca-vazamento-bairro-3",
-    "regiao": "[CIDADE]",
-    "title": "Caça Vazamento em [BAIRRO 3], [CIDADE] | Hidroval",
-    "metaDescription": "Caça vazamento em [BAIRRO 3], [CIDADE]: detecção com geofone e sem quebra-quebra para casas, apartamentos, condomínios e empresas. Orçamento pelo WhatsApp.",
-    "h1": "Caça Vazamento em [BAIRRO 3]",
-    "tag": "Atendimento disponível na região",
-    "textoDecorativo": "BAIRRO 3",
-    "heroTexto": "Conta de água alta, manchas na parede, piscina perdendo água ou hidrômetro girando sem parar? A Hidroval Caça Vazamento atende [BAIRRO 3] com detecção de vazamentos por geofone e sem quebra-quebra.",
+    "nome": "Tatuapé",
+    "slug": "caca-vazamento-tatuape",
+    "regiao": "Zona Leste de São Paulo",
+    "title": "Caça Vazamento no Tatuapé, São Paulo | Hidroval",
+    "metaDescription": "Caça vazamento no Tatuapé: detecção em casas, sobrados, condomínios de torres e piscinas, sem quebra-quebra. Orçamento pelo WhatsApp.",
+    "h1": "Caça Vazamento no Tatuapé",
+    "tag": "Sobrados, torres e condomínios clube",
+    "textoDecorativo": "TATUAPÉ",
+    "heroTexto": "No Tatuapé, vazamento pode estar no quintal de um sobrado tradicional ou na rede de um condomínio com várias torres e área de lazer. A Hidroval localiza o problema com geofone nos dois casos, sem quebrar à toa.",
     "ctaPrincipal": "Pedir orçamento",
     "ctaSecundario": "Ver região atendida",
-    "whatsappMensagem": "Olá! Vim pelo site, estou em [BAIRRO 3] e preciso de um caça vazamento.",
-    "introTitulo": "Detecção de vazamento em [BAIRRO 3] com atendimento local.",
+    "whatsappMensagem": "Olá! Vim pelo site, estou no Tatuapé e preciso de um caça vazamento.",
+    "introTitulo": "Do sobrado ao condomínio clube.",
     "introParagrafos": [
-      "Casas, apartamentos, condomínios e comércios de [BAIRRO 3] podem ter vazamentos escondidos em tubulações embutidas, enterradas ou em reservatórios.",
-      "Muitas vezes o primeiro sinal é a conta de água mais alta, uma mancha que não sai ou o hidrômetro girando mesmo com tudo fechado.",
-      "A Hidroval atende [BAIRRO 3] com equipamentos de detecção para localizar o ponto exato do vazamento e evitar quebras desnecessárias."
+      "O Tatuapé tem duas caras. Nas ruas residenciais mais antigas, predominam casas e sobrados com quintal, onde a tubulação enterrada entre o hidrômetro e a casa é um ponto comum de vazamento.",
+      "Nas últimas décadas, o bairro recebeu muitos condomínios de torres altas, vários deles com piscina, academia e área de lazer. Nesses casos, a perda de água pode estar em reservatórios, barriletes, redes enterradas ou nas piscinas.",
+      "A Hidroval atende moradores e síndicos do Tatuapé com teste de hidrômetro, varredura com geofone e detecção em piscinas, sempre buscando a menor abertura possível para o reparo."
     ],
     "bairrosProximos": [
       {
-        "nome": "[BAIRRO 1]",
-        "url": "/caca-vazamento-bairro-1/"
+        "nome": "Anália Franco",
+        "url": "/onde-atendemos/"
       },
       {
-        "nome": "[BAIRRO 2]",
-        "url": "/caca-vazamento-bairro-2/"
+        "nome": "Mooca",
+        "url": "/onde-atendemos/"
       },
       {
-        "nome": "[BAIRRO 4]",
-        "url": "/caca-vazamento-bairro-4/"
+        "nome": "Carrão",
+        "url": "/onde-atendemos/"
+      },
+      {
+        "nome": "Vila Gomes Cardim",
+        "url": "/onde-atendemos/"
       }
     ],
     "faq": [
       {
-        "pergunta": "A Hidroval atende em [BAIRRO 3]?",
-        "resposta": "Sim. Atendemos [BAIRRO 3] e bairros próximos em [CIDADE]. Informe sua rua pelo WhatsApp para confirmar a disponibilidade."
+        "pergunta": "O vazamento pode estar no quintal, antes da casa?",
+        "resposta": "Pode. Em casas e sobrados, a rede enterrada entre o hidrômetro e o imóvel é uma das causas mais comuns de conta alta. O geofone localiza o ponto sem cavar o quintal inteiro."
       },
       {
-        "pergunta": "Como pedir orçamento?",
-        "resposta": "Chame pelo WhatsApp, informe o bairro, o tipo de imóvel e os sinais que percebeu para receber a orientação inicial."
+        "pergunta": "Vocês fazem detecção em piscinas de condomínio?",
+        "resposta": "Sim. Verificamos revestimento, dispositivos, casa de máquinas e tubulação para descobrir se a piscina está vazando ou só evaporando."
       },
       {
-        "pergunta": "Qual o horário de atendimento?",
-        "resposta": "Atendemos [HORÁRIO]. A disponibilidade pode variar conforme a agenda e a localização."
+        "pergunta": "Como pedir orçamento no Tatuapé?",
+        "resposta": "Chame pelo WhatsApp, informe a rua e o tipo de imóvel e conte o que percebeu: conta alta, manchas, umidade ou hidrômetro girando."
       }
-    ]
+    ],
+    "em": "no"
   },
   {
-    "nome": "[BAIRRO 4]",
-    "slug": "caca-vazamento-bairro-4",
-    "regiao": "[CIDADE]",
-    "title": "Caça Vazamento em [BAIRRO 4], [CIDADE] | Hidroval",
-    "metaDescription": "Caça vazamento em [BAIRRO 4], [CIDADE]: detecção com geofone e sem quebra-quebra para casas, apartamentos, condomínios e empresas. Orçamento pelo WhatsApp.",
-    "h1": "Caça Vazamento em [BAIRRO 4]",
-    "tag": "Atendimento disponível na região",
-    "textoDecorativo": "BAIRRO 4",
-    "heroTexto": "Conta de água alta, manchas na parede, piscina perdendo água ou hidrômetro girando sem parar? A Hidroval Caça Vazamento atende [BAIRRO 4] com detecção de vazamentos por geofone e sem quebra-quebra.",
+    "nome": "Santana",
+    "slug": "caca-vazamento-santana",
+    "regiao": "Zona Norte de São Paulo",
+    "title": "Caça Vazamento em Santana, São Paulo | Hidroval",
+    "metaDescription": "Caça vazamento em Santana: detecção em casas, sobrados e prédios antigos, sem quebra-quebra. Conta de água alta? Orçamento pelo WhatsApp.",
+    "h1": "Caça Vazamento em Santana",
+    "tag": "Casas, sobrados e prédios antigos",
+    "textoDecorativo": "SANTANA",
+    "heroTexto": "Santana tem muitas casas, sobrados e prédios com décadas de uso, e tubulação antiga costuma vazar em lugares escondidos. A Hidroval localiza o vazamento com geofone para você não quebrar a casa inteira atrás dele.",
     "ctaPrincipal": "Pedir orçamento",
     "ctaSecundario": "Ver região atendida",
-    "whatsappMensagem": "Olá! Vim pelo site, estou em [BAIRRO 4] e preciso de um caça vazamento.",
-    "introTitulo": "Detecção de vazamento em [BAIRRO 4] com atendimento local.",
+    "whatsappMensagem": "Olá! Vim pelo site, estou em Santana e preciso de um caça vazamento.",
+    "introTitulo": "Imóveis com história, tubulações com idade.",
     "introParagrafos": [
-      "Casas, apartamentos, condomínios e comércios de [BAIRRO 4] podem ter vazamentos escondidos em tubulações embutidas, enterradas ou em reservatórios.",
-      "Muitas vezes o primeiro sinal é a conta de água mais alta, uma mancha que não sai ou o hidrômetro girando mesmo com tudo fechado.",
-      "A Hidroval atende [BAIRRO 4] com equipamentos de detecção para localizar o ponto exato do vazamento e evitar quebras desnecessárias."
+      "Santana é um dos bairros mais tradicionais da Zona Norte. Grande parte dos imóveis são casas e sobrados construídos há bastante tempo, além de prédios residenciais mais antigos, muitos sem reforma completa do encanamento.",
+      "Tubulações antigas sofrem com corrosão, emendas improvisadas em reformas anteriores e raízes de árvores em quintais. O resultado costuma ser conta de água alta, paredes úmidas e piso molhado sem causa aparente.",
+      "A Hidroval faz o teste do hidrômetro, percorre o trajeto da tubulação com geofone e marca o ponto do vazamento. Assim o reparo é feito só onde precisa, preservando pisos e azulejos antigos que nem sempre têm reposição."
     ],
     "bairrosProximos": [
       {
-        "nome": "[BAIRRO 1]",
-        "url": "/caca-vazamento-bairro-1/"
+        "nome": "Tucuruvi",
+        "url": "/onde-atendemos/"
       },
       {
-        "nome": "[BAIRRO 2]",
-        "url": "/caca-vazamento-bairro-2/"
+        "nome": "Mandaqui",
+        "url": "/onde-atendemos/"
       },
       {
-        "nome": "[BAIRRO 3]",
-        "url": "/caca-vazamento-bairro-3/"
+        "nome": "Casa Verde",
+        "url": "/onde-atendemos/"
+      },
+      {
+        "nome": "Vila Guilherme",
+        "url": "/onde-atendemos/"
       }
     ],
     "faq": [
       {
-        "pergunta": "A Hidroval atende em [BAIRRO 4]?",
-        "resposta": "Sim. Atendemos [BAIRRO 4] e bairros próximos em [CIDADE]. Informe sua rua pelo WhatsApp para confirmar a disponibilidade."
+        "pergunta": "Meu piso é antigo e não tem reposição. Dá para evitar quebrar?",
+        "resposta": "A localização com geofone indica o ponto exato, então a abertura fica restrita a poucas peças. Isso ajuda a preservar pisos e azulejos difíceis de encontrar."
       },
       {
-        "pergunta": "Como pedir orçamento?",
-        "resposta": "Chame pelo WhatsApp, informe o bairro, o tipo de imóvel e os sinais que percebeu para receber a orientação inicial."
+        "pergunta": "A conta subiu muito. Pode ser vazamento na tubulação antiga?",
+        "resposta": "Pode. Em imóveis antigos, é comum a tubulação corroída vazar sem aparecer. O teste do hidrômetro confirma se há perda de água."
       },
       {
-        "pergunta": "Qual o horário de atendimento?",
-        "resposta": "Atendemos [HORÁRIO]. A disponibilidade pode variar conforme a agenda e a localização."
+        "pergunta": "Vocês atendem prédios em Santana?",
+        "resposta": "Sim. Atendemos apartamentos e também áreas comuns, reservatórios e prumadas, em contato com o síndico ou o zelador."
       }
     ]
   }

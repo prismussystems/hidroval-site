@@ -39,7 +39,7 @@
     <div class="hero-visual reveal">
       <div class="hero-image">
         {% if bairro.heroImagem %}
-          <img src="{{ bairro.heroImagem }}" alt="Detecção de vazamento em {{ bairro.nome }}">
+          <img src="{{ bairro.heroImagem }}" alt="Detecção de vazamento {{ bairro.em or "em" }} {{ bairro.nome }}">
         {% else %}
           <div class="media-placeholder" role="img" aria-label="{{ site.empresa }}">
             <span>[IMG: hero-bairro.jpg]</span>
@@ -65,7 +65,7 @@
 
         <div class="local-card-copy">
           <small>Cobertura local</small>
-          <h3>Atendimento em {{ bairro.nome }}</h3>
+          <h3>Atendimento {{ bairro.em or "em" }} {{ bairro.nome }}</h3>
           <p>Informe sua rua, condomínio ou ponto de referência para confirmar a disponibilidade da equipe.</p>
         </div>
       </div>
