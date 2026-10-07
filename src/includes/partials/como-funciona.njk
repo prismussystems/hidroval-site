@@ -1,0 +1,26 @@
+{# Espera: etapas, processoTitulo, processoTexto #}
+<section class="section" id="como-funciona">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Como funciona</span>
+      <h2>{{ processoTitulo or "Como funciona o atendimento?" }}</h2>
+      {% if processoTexto %}<p class="lead">{{ processoTexto }}</p>{% endif %}
+    </div>
+
+    <div class="process-list">
+      {% for etapa in etapas %}
+        <div class="step reveal">
+          <div class="step-num">{{ "0" + loop.index if loop.index < 10 else loop.index }}</div>
+          <div>
+            <h3>{{ etapa.titulo }}</h3>
+            <p>{{ etapa.texto }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="section-cta reveal">
+      <a class="btn btn-primary" href="https://wa.me/{{ site.whatsapp }}?text={{ (whatsappMensagem or site.whatsappMensagem) | urlencode }}" target="_blank" rel="noopener">Pedir orçamento pelo WhatsApp</a>
+    </div>
+  </div>
+</section>

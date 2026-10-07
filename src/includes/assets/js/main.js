@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const revealItems = document.querySelectorAll(".reveal");
 
-  if ("IntersectionObserver" in window && revealItems.length > 0) {
+  if ("IntersectionObserver" in window && revealItems.length > 0 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     const observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -43,11 +43,62 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Valida campos obrigatórios e mostra a mensagem logo abaixo de cada campo.
+  function validarFormulario(formulario) {
+    let primeiroInvalido = null;
+
+    formulario.querySelectorAll("[required]").forEach(function (campo) {
+      const erroId = campo.id + "-erro";
+      let erro = document.getElementById(erroId);
+
+      if (campo.value.trim()) {
+        campo.removeAttribute("aria-invalid");
+        campo.removeAttribute("aria-describedby");
+        if (erro) erro.remove();
+        return;
+      }
+
+      if (!erro) {
+        erro = document.createElement("span");
+        erro.id = erroId;
+        erro.className = "field-error";
+        erro.setAttribute("role", "alert");
+        campo.insertAdjacentElement("afterend", erro);
+      }
+
+      const rotulo = formulario.querySelector('label[for="' + campo.id + '"]');
+      const nomeCampo = rotulo ? rotulo.textContent.trim().toLowerCase() : "este campo";
+      erro.textContent = campo.tagName === "SELECT" ? "Selecione o " + nomeCampo + "." : "Preencha o campo " + nomeCampo + ".";
+      campo.setAttribute("aria-invalid", "true");
+      campo.setAttribute("aria-describedby", erroId);
+      primeiroInvalido = primeiroInvalido || campo;
+    });
+
+    if (primeiroInvalido) {
+      primeiroInvalido.focus();
+      return false;
+    }
+
+    return true;
+  }
+
+  document.querySelectorAll("form[novalidate] [required]").forEach(function (campo) {
+    campo.addEventListener(campo.tagName === "SELECT" ? "change" : "blur", function () {
+      if (campo.getAttribute("aria-invalid") === "true" && campo.value.trim()) {
+        validarFormulario(campo.form);
+      }
+    });
+  });
+
   const form = document.querySelector("#localForm");
 
   if (form) {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
+
+      if (!validarFormulario(form)) {
+        return;
+      }
 
       const bairro = form.dataset.bairro || "minha região";
       const whatsapp = form.dataset.whatsapp;
@@ -69,6 +120,10 @@ document.addEventListener("DOMContentLoaded", function () {
 if (serviceForm) {
   serviceForm.addEventListener("submit", function (event) {
     event.preventDefault();
+
+    if (!validarFormulario(serviceForm)) {
+      return;
+    }
 
     const whatsapp = serviceForm.dataset.whatsapp;
     const servico = serviceForm.dataset.servico || "detecção de vazamento";
@@ -92,6 +147,10 @@ if (serviceForm) {
   if (contactForm) {
     contactForm.addEventListener("submit", function (event) {
       event.preventDefault();
+
+      if (!validarFormulario(contactForm)) {
+        return;
+      }
 
       const whatsapp = contactForm.dataset.whatsapp;
       const nome = document.querySelector("#contactName")?.value.trim();
@@ -119,7 +178,8 @@ if (serviceForm) {
       const item = button.closest(".faq-item");
       const answer = item.querySelector(".faq-answer");
 
-      item.classList.toggle("open");
+      const aberto = item.classList.toggle("open");
+      button.setAttribute("aria-expanded", String(aberto));
 
       if (item.classList.contains("open")) {
         answer.style.maxHeight = answer.scrollHeight + "px";

@@ -1,0 +1,20 @@
+{
+  "sinais": [
+    { "titulo": "Conta de água alta", "texto": "O valor subiu e a rotina da casa continua a mesma." },
+    { "titulo": "Hidrômetro girando", "texto": "O relógio registra consumo com todas as torneiras fechadas." },
+    { "titulo": "Mancha ou mofo", "texto": "Umidade, bolhas na pintura ou bolor que volta sempre." },
+    { "titulo": "Piso úmido", "texto": "Rejunte sempre molhado ou peças soltando sem motivo." }
+  ],
+  "etapas": [
+    { "titulo": "Você conta o problema", "texto": "Pelo WhatsApp, informe o bairro, o tipo de imóvel e os sinais que percebeu." },
+    { "titulo": "Confirmamos o vazamento", "texto": "No local, testamos o hidrômetro e a pressão da rede." },
+    { "titulo": "Localizamos o ponto exato", "texto": "Com geofone, percorremos a tubulação até achar o vazamento, sem quebrar." },
+    { "titulo": "Orientamos o reparo", "texto": "O ponto é marcado para que a abertura seja só onde precisa." }
+  ],
+  "faq": [
+    { "pergunta": "Como sei se tenho um vazamento?", "resposta": "Feche todas as torneiras e registros de uso e observe o hidrômetro. Se ele continuar girando, há consumo ou vazamento em algum ponto." },
+    { "pergunta": "Vou precisar quebrar parede ou piso?", "resposta": "Para encontrar o vazamento, não. A localização é feita com equipamentos. A abertura, quando necessária para o reparo, fica restrita ao ponto exato." },
+    { "pergunta": "Vocês atendem em quais regiões?", "resposta": "Atendemos a cidade de São Paulo. Informe seu bairro pelo WhatsApp para confirmar a disponibilidade." },
+    { "pergunta": "Como peço um orçamento?", "resposta": "Chame pelo WhatsApp, conte o que está acontecendo e, se possível, envie fotos. A equipe orienta e agenda a visita." }
+  ]
+}

@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: "Serviços de Caça Vazamento em São Paulo | Hidroval Caça Vazamento"
+title: "Serviços de Caça Vazamento em São Paulo | Hidroval"
 description: "Detecção de vazamento com geofone, vazamento em piscina, caixa d'água, parede e piso, conta de água alta e detecção sem quebra-quebra em São Paulo."
 permalink: "/servicos/"
 ---
@@ -26,6 +26,8 @@ permalink: "/servicos/"
   </div>
 </section>
 
+{% include "partials/faixa-confianca.njk" %}
+
 <section class="section">
   <div class="container">
     <div class="section-head reveal">
@@ -40,9 +42,6 @@ permalink: "/servicos/"
     <div class="institutional-card-grid">
       {% for item in servicos %}
         <article class="institutional-service-card reveal">
-          {% if item.foto %}
-            <img class="card-photo" src="{{ item.foto }}" alt="{{ item.fotoAlt }}" width="800" height="498" loading="lazy">
-          {% endif %}
           <span>{{ "0" + loop.index if loop.index < 10 else loop.index }}</span>
           <h3><a href="/{{ item.slug }}/">{{ item.nome }}</a></h3>
           <p>{{ item.resumo }}</p>

@@ -4,7 +4,11 @@
 <title>{{ title or site.empresa }}</title>
 <meta name="description" content="{{ description or site.descricaoPadrao }}">
 
-{% if page.url %}
+{% if noindex %}
+<meta name="robots" content="noindex">
+{% endif %}
+
+{% if page.url and not noindex %}
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 {% endif %}
 
@@ -24,6 +28,17 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:site_name" content="{{ site.empresa }}">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="{{ site.url }}/assets/img/og-hidroval.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ site.empresa }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title or site.empresa }}">
+<meta name="twitter:description" content="{{ description or site.descricaoPadrao }}">
+<meta name="twitter:image" content="{{ site.url }}/assets/img/og-hidroval.jpg">
+
+{% include "partials/schema-empresa.njk" %}
 
 {#
   ANALYTICS / TAG MANAGER / PIXEL

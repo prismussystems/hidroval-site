@@ -10,5 +10,27 @@
     "cnpj": "[CNPJ]",
     "atendimento": "[HORÁRIO]",
     "url": "https://[DOMÍNIO]",
-    "descricaoPadrao": "Detecção e reparo de vazamentos de água com geofone e sem quebra-quebra para casas, apartamentos, condomínios e empresas em São Paulo."
+    "descricaoPadrao": "Detecção de vazamentos de água com geofone e sem quebra-quebra para casas, apartamentos, condomínios e empresas em São Paulo.",
+    "confianca": [
+        {
+            "icone": "escuta",
+            "titulo": "Detecção com geofone",
+            "texto": "Localiza vazamentos ocultos pelo som da água"
+        },
+        {
+            "icone": "escudo",
+            "titulo": "Sem quebra-quebra",
+            "texto": "Abertura só no ponto exato do reparo"
+        },
+        {
+            "icone": "pin",
+            "titulo": "Atendimento em São Paulo",
+            "texto": "Casas, apartamentos, condomínios e empresas"
+        },
+        {
+            "icone": "chat",
+            "titulo": "Orçamento pelo WhatsApp",
+            "texto": "Envie fotos e tire dúvidas antes da visita"
+        }
+    ]
 }

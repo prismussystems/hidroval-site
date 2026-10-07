@@ -6,22 +6,29 @@
     </div>
 
     <form
+      novalidate
       class="quote-form"
       id="localForm"
       data-bairro="{{ bairro.nome }}"
       data-whatsapp="{{ site.whatsapp }}"
     >
-      <label for="name">Nome</label>
-      <input id="name" type="text" placeholder="Seu nome" required>
+      <div class="field">
+        <label for="name">Nome</label>
+        <input id="name" type="text" autocomplete="name" placeholder="Seu nome" required>
+      </div>
 
-      <label for="street">Rua ou ponto de referência</label>
-      <input id="street" type="text" placeholder="Rua ou ponto de referência" required>
+      <div class="field">
+        <label for="street">Rua ou ponto de referência</label>
+        <input id="street" type="text" autocomplete="street-address" placeholder="Ex.: Rua Tal, 100" required>
+      </div>
 
-      <label for="problem">Tipo de problema</label>
-      <select id="problem" required>
-        <option value="">Qual é o problema?</option>
-        {% include "partials/opcoes-problema.njk" %}
-      </select>
+      <div class="field">
+        <label for="problem">Tipo de problema</label>
+        <select id="problem" required>
+          <option value="">Selecione</option>
+          {% include "partials/opcoes-problema.njk" %}
+        </select>
+      </div>
 
       <button class="btn btn-primary" type="submit">
         Consultar atendimento

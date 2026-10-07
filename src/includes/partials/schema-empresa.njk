@@ -1,0 +1,33 @@
+{# LocalBusiness em todas as páginas. Campos com placeholder "[...]" ficam de fora até termos o dado real. #}
+{% macro real(v) %}{{ "1" if (v and v[0] != "[") else "" }}{% endmacro %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Plumber",
+  "@id": {{ (site.url + "/#localbusiness") | dump | safe }},
+  "name": {{ site.empresa | dump | safe }},
+  "url": {{ (site.url + "/") | dump | safe }},
+  "logo": {{ (site.url + "/assets/img/icone_512px.png") | dump | safe }},
+  "image": {{ (site.url + "/assets/img/og-hidroval.jpg") | dump | safe }},
+  "description": {{ site.descricaoPadrao | dump | safe }},
+  {%- if real(site.telefone) %}
+  "telephone": {{ site.telefone | dump | safe }},
+  {%- endif %}
+  {%- if real(site.email) %}
+  "email": {{ site.email | dump | safe }},
+  {%- endif %}
+  {%- if real(site.endereco) %}
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": {{ site.endereco | dump | safe }},
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
+  },
+  {%- endif %}
+  "areaServed": {
+    "@type": "City",
+    "name": {{ site.cidade | dump | safe }}
+  }
+}
+</script>

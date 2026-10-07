@@ -1,9 +1,11 @@
+{# Espera: faqItens e faqTitulo (com fallback para a página de bairro) #}
+{% set itensFaq = faqItens or bairro.faq %}
 <section class="section faq" id="faq">
   <div class="container faq-wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Dúvidas frequentes</span>
 
-      <h2>Perguntas sobre caça vazamento {{ bairro.em or "em" }} {{ bairro.nome }}.</h2>
+      <h2>{{ faqTitulo or ("Perguntas sobre caça vazamento " + (bairro.em or "em") + " " + bairro.nome + ".") }}</h2>
 
       <p class="lead">
         Veja respostas rápidas antes de chamar a equipe pelo WhatsApp.
@@ -11,14 +13,14 @@
     </div>
 
     <div class="faq-list reveal">
-      {% for item in bairro.faq %}
+      {% for item in itensFaq %}
         <div class="faq-item">
-          <button class="faq-question" type="button">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-{{ loop.index }}" id="faq-q-{{ loop.index }}">
             <span>{{ item.pergunta }}</span>
-            <span>+</span>
+            <span aria-hidden="true">+</span>
           </button>
 
-          <div class="faq-answer">
+          <div class="faq-answer" id="faq-{{ loop.index }}" role="region" aria-labelledby="faq-q-{{ loop.index }}">
             <p>{{ item.resposta }}</p>
           </div>
         </div>
@@ -26,3 +28,19 @@
     </div>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in itensFaq %}
+    {
+      "@type": "Question",
+      "name": {{ item.pergunta | dump | safe }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ item.resposta | dump | safe }} }
+    }{{ "," if not loop.last }}
+    {%- endfor %}
+  ]
+}
+</script>

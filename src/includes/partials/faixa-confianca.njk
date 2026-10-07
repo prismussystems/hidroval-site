@@ -1,0 +1,14 @@
+{% from "partials/icones.njk" import icone %}
+<section class="trust-strip" aria-label="Por que escolher a {{ site.empresa }}">
+  <div class="container trust-grid">
+    {% for item in site.confianca %}
+      <div class="trust-item">
+        <span class="trust-icon">{{ icone(item.icone) }}</span>
+        <span>
+          <strong>{{ item.titulo }}</strong>
+          <small>{{ item.texto }}</small>
+        </span>
+      </div>
+    {% endfor %}
+  </div>
+</section>

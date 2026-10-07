@@ -1,9 +1,10 @@
 ---
 layout: layouts/base.njk
 title: "Hidroval Caça Vazamento | Detecção de Vazamentos em São Paulo"
-description: "Detecção e reparo de vazamentos de água em São Paulo com geofone e sem quebra-quebra. Atendimento para casas, apartamentos, condomínios e empresas."
+description: "Detecção de vazamentos de água em São Paulo com geofone e sem quebra-quebra. Atendimento para casas, apartamentos, condomínios e empresas."
 permalink: "/"
 ---
+{% from "partials/icones.njk" import icone %}
 
 <section class="institutional-hero">
   <div class="container institutional-hero-grid">
@@ -25,12 +26,6 @@ permalink: "/"
           Ver serviços
         </a>
       </div>
-
-      <div class="hero-proof">
-        <span><b>✓</b> Detecção com geofone</span>
-        <span><b>✓</b> Sem quebra-quebra</span>
-        <span><b>✓</b> Orçamento via WhatsApp</span>
-      </div>
     </div>
 
     <div class="institutional-hero-card reveal">
@@ -46,7 +41,34 @@ permalink: "/"
   </div>
 </section>
 
-<section class="section">
+{% include "partials/faixa-confianca.njk" %}
+
+<section class="section signs">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Algum desses sinais aparece no seu imóvel?</h2>
+      <p class="lead">
+        Vazamentos ocultos quase nunca aparecem onde estão. Estes são os sinais mais comuns de que há água escapando em algum ponto da tubulação.
+      </p>
+    </div>
+
+    <div class="signs-grid">
+      {% for sinal in home.sinais %}
+        <article class="sign-card reveal">
+          <span class="sign-icon">{{ icone("gota") }}</span>
+          <h3>{{ sinal.titulo }}</h3>
+          <p>{{ sinal.texto }}</p>
+        </article>
+      {% endfor %}
+    </div>
+
+    <div class="section-cta reveal">
+      <a class="btn btn-primary" href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsappMensagem | urlencode }}" target="_blank" rel="noopener">Falar com um técnico</a>
+    </div>
+  </div>
+</section>
+
+<section class="section institutional-band">
   <div class="container">
     <div class="section-head reveal">
       <h2>Soluções para cada tipo de vazamento.</h2>
@@ -58,9 +80,6 @@ permalink: "/"
     <div class="institutional-card-grid">
       {% for item in servicos %}
         <article class="institutional-service-card reveal">
-          {% if item.foto %}
-            <img class="card-photo" src="{{ item.foto }}" alt="{{ item.fotoAlt }}" width="800" height="498" loading="lazy">
-          {% endif %}
           <span>{{ "0" + loop.index if loop.index < 10 else loop.index }}</span>
           <h3><a href="/{{ item.slug }}/">{{ item.nome }}</a></h3>
           <p>{{ item.resumo }}</p>
@@ -70,6 +89,13 @@ permalink: "/"
   </div>
 </section>
 
+{% set etapas = home.etapas %}
+{% set processoTitulo = "Do primeiro contato ao vazamento localizado." %}
+{% set processoTexto = "Um processo simples, que começa pelo WhatsApp e termina com o ponto exato marcado." %}
+{% include "partials/como-funciona.njk" %}
+
+{% include "partials/prova-social.njk" %}
+
 <section class="section institutional-band">
   <div class="container institutional-split">
     <div class="reveal">
@@ -77,7 +103,7 @@ permalink: "/"
       <p class="lead">
         A Hidroval atende imóveis residenciais, condomínios, comércios e empresas em diferentes bairros de {{ site.cidade }}.
       </p>
-      <a class="btn btn-primary" href="/onde-atendemos/">Ver bairros atendidos</a>
+      <a class="btn btn-outline" href="/onde-atendemos/">Ver bairros atendidos</a>
     </div>
 
     <div class="institutional-list reveal">
@@ -87,6 +113,10 @@ permalink: "/"
     </div>
   </div>
 </section>
+
+{% set faqItens = home.faq %}
+{% set faqTitulo = "Perguntas frequentes sobre caça vazamento." %}
+{% include "partials/faq.njk" %}
 
 <section class="final-cta" data-bg="HIDROVAL">
   <div class="container cta-grid">

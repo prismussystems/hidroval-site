@@ -4,6 +4,7 @@ title: "Onde Atendemos | Hidroval Caça Vazamento"
 description: "Veja as regiões atendidas pela Hidroval Caça Vazamento em São Paulo. Detecção de vazamentos para residências, condomínios, comércios e empresas."
 permalink: "/onde-atendemos/"
 ---
+{% from "partials/icones.njk" import icone %}
 
 <section class="institutional-page-hero">
   <div class="container">
@@ -33,7 +34,7 @@ permalink: "/onde-atendemos/"
           </p>
 
           <a href="/{{ bairro.slug }}/">
-            Ver página local →
+            Ver página local {{ icone("seta") }}
           </a>
         </article>
       {% endfor %}

@@ -22,9 +22,9 @@ permalink: "/contato/"
         Informe seu nome, bairro, tipo de imóvel e o que está acontecendo. Com essas informações, a equipe consegue orientar o atendimento com mais agilidade.
       </p>
 
-      <form class="contact-form" id="contactForm" data-whatsapp="{{ site.whatsapp }}">
+      <form novalidate class="contact-form" id="contactForm" data-whatsapp="{{ site.whatsapp }}">
         <label for="contactName">Nome</label>
-        <input id="contactName" type="text" placeholder="Seu nome" required>
+        <input id="contactName" type="text" autocomplete="name" placeholder="Seu nome" required>
 
         <label for="contactDistrict">Bairro</label>
         <input id="contactDistrict" type="text" placeholder="Seu bairro" required>

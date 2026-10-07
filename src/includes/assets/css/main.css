@@ -124,8 +124,9 @@
     .phone{
       display:flex;flex-direction:column;text-align:right;line-height:1.12;
     }
-    .phone small{color:var(--muted);font-size:.64rem;font-weight:800;text-transform:uppercase}
-    .phone strong{font-size:.9rem}
+    .phone small{display:none}
+    .phone strong{color:var(--ink-2);font-size:.9rem;font-weight:500}
+    .phone:hover strong{color:var(--royal)}
     .menu-toggle{
       display:none;width:48px;height:48px;place-items:center;
       border:0;border-radius:50%;color:white;background:var(--navy);
@@ -220,7 +221,7 @@
       text-align:center;transform:rotate(6deg);
     }
     .coverage-stamp strong{display:block;font-size:1.35rem;line-height:1}
-    .coverage-stamp span{display:block;margin-top:6px;font-size:.69rem;font-weight:850;text-transform:uppercase}
+    .coverage-stamp span{display:block;margin-top:6px;font-size:.75rem;font-weight:850;text-transform:uppercase}
     .local-card{
       position:absolute;z-index:5;right:18px;bottom:0;left:0;
       display:grid;grid-template-columns:170px 1fr;
@@ -245,11 +246,11 @@
     }
     .local-card-copy{padding:24px 25px}
     .local-card-copy small{
-      display:block;color:var(--cyan);font-size:.68rem;
+      display:block;color:var(--cyan);font-size:.75rem;
       font-weight:900;letter-spacing:.12em;text-transform:uppercase;
     }
     .local-card-copy h3{margin:7px 0 9px;font-size:1.15rem; line-height:1.4;}
-    .local-card-copy p{margin:0;color:rgba(255,255,255,.66);font-size:.82rem}
+    .local-card-copy p{margin:0;color:rgba(255,255,255,.78);font-size:.82rem}
 
     /* Quote bar */
     .quote-strip{
@@ -261,18 +262,20 @@
       min-height:145px;align-items:center;gap:32px;
     }
     .quote-title strong{display:block;color:var(--cyan);font-size:1.12rem}
-    .quote-title span{display:block;color:rgba(255,255,255,.65);font-size:.8rem}
+    .quote-title span{display:block;color:rgba(255,255,255,.78);font-size:.8rem}
     .quote-form{
       display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:10px;
     }
-    .quote-form label{position:absolute;width:1px;height:1px;overflow:hidden}
+    .quote-form{align-items:end}
+    .quote-form .field{display:grid;gap:6px}
+    .quote-form label{color:rgba(255,255,255,.85);font-size:.8rem;font-weight:500}
     .quote-form input,.quote-form select{
       width:100%;min-height:52px;padding:0 14px;
       border:1px solid rgba(255,255,255,.16);border-radius:11px;
       outline:0;color:white;background:rgba(255,255,255,.075);
     }
     .quote-form option{color:var(--ink);background:white}
-    .quote-form input::placeholder{color:rgba(255,255,255,.65)}
+    .quote-form input::placeholder{color:rgba(255,255,255,.78)}
     .quote-form input:focus,.quote-form select:focus{border-color:var(--cyan)}
 
     /* Intro local */
@@ -288,7 +291,7 @@
     }
     .intro-aside strong{
       display:block;margin-bottom:17px;
-      color:var(--royal);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--royal);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;
     }
     .local-data{display:grid;gap:14px}
     .local-data div{
@@ -321,7 +324,7 @@
     /* Services */
     .services-local{color:var(--white);background:var(--navy)}
     .services-local .eyebrow{color:var(--cyan)}
-    .services-local .lead{color:rgba(255,255,255,.65)}
+    .services-local .lead{color:rgba(255,255,255,.78)}
     .services-grid{
       display:grid;grid-template-columns:repeat(3,1fr);gap:15px;
     }
@@ -350,7 +353,7 @@
     }
     .service-card .num{
       position:absolute;top:21px;right:23px;
-      color:rgba(255,255,255,.42);
+      color:rgba(255,255,255,.78);
       font-family:var(--font-title);font-weight:800;
     }
     .service-icon{
@@ -405,7 +408,7 @@
       backdrop-filter:blur(12px);
     }
     .property-caption strong{display:block}
-    .property-caption span{color:rgba(255,255,255,.65);font-size:.78rem}
+    .property-caption span{color:rgba(255,255,255,.78);font-size:.78rem}
 
     /* Process */
     .process-grid{
@@ -428,7 +431,7 @@
     /* Area map */
     .coverage{color:white;background:var(--navy)}
     .coverage .eyebrow{color:var(--cyan)}
-    .coverage .lead{color:rgba(255,255,255,.67)}
+    .coverage .lead{color:rgba(255,255,255,.78)}
     .coverage-grid{
       display:grid;grid-template-columns:.92fr 1.08fr;
       gap:58px;align-items:center;
@@ -468,7 +471,7 @@
       background:rgba(2,41,95,.82);backdrop-filter:blur(12px);
     }
     .route-card strong{display:block;color:var(--cyan)}
-    .route-card span{font-size:.82rem;color:rgba(255,255,255,.66)}
+    .route-card span{font-size:.82rem;color:rgba(255,255,255,.78)}
 
     /* Differentials */
     .benefits-grid{
@@ -525,7 +528,7 @@
       display:grid;grid-template-columns:1fr auto;gap:38px;align-items:center;
     }
     .final-cta h2{max-width:860px;margin-bottom:16px}
-    .final-cta p{max-width:690px;color:rgba(255,255,255,.67)}
+    .final-cta p{max-width:690px;color:rgba(255,255,255,.78)}
     footer{color:white;background:var(--navy)}
     .footer-main{
       display:grid;grid-template-columns:1.25fr repeat(3,.75fr);
@@ -533,17 +536,17 @@
     }
     /* Logo branca sobre o azul marinho: sem caixa, sombra ou filtro (manual de marca) */
     .footer-brand img{width:210px;min-width:140px;height:auto}
-    .footer-brand p{max-width:350px;margin:19px 0;color:rgba(255,255,255,.62)}
+    .footer-brand p{max-width:350px;margin:19px 0;color:rgba(255,255,255,.78)}
     .footer-col strong{
       display:block;margin-bottom:18px;color:var(--cyan);
-      font-size:.73rem;letter-spacing:.13em;text-transform:uppercase;
+      font-size:.75rem;letter-spacing:.13em;text-transform:uppercase;
     }
-    .footer-col a{display:block;margin:9px 0;color:rgba(255,255,255,.67);font-size:.86rem}
+    .footer-col a{display:block;margin:9px 0;color:rgba(255,255,255,.78);font-size:.86rem}
     .footer-col a:hover{color:white}
     .footer-bottom{
       display:flex;min-height:72px;align-items:center;justify-content:space-between;
       gap:24px;border-top:1px solid rgba(255,255,255,.1);
-      color:rgba(255,255,255,.45);font-size:.77rem;
+      color:rgba(255,255,255,.78);font-size:.77rem;
     }
     .floating-wa{
       position:fixed;right:22px;bottom:22px;z-index:50;
@@ -745,7 +748,7 @@
   display: inline-flex;
   margin-bottom: 26px;
   color: var(--royal);
-  font-size: .72rem;
+  font-size: .75rem;
   font-weight: 900;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -883,6 +886,7 @@
   border-radius: 12px;
   outline: 0;
   background: white;
+  font-size: 1rem;
 }
 
 .contact-form input,
@@ -1078,7 +1082,7 @@
   background:url("/assets/img/hidroval-simbolo-branco.webp") center/contain no-repeat;
 }
 .media-placeholder span{
-  color:rgba(255,255,255,.55);font-size:.72rem;letter-spacing:.08em;
+  color:rgba(255,255,255,.78);font-size:.75rem;letter-spacing:.08em;
 }
 .hero-image .media-placeholder{padding-bottom:32px}
 
@@ -1092,3 +1096,124 @@
 .institutional-service-card h3 a:hover{text-decoration:underline;text-decoration-color:var(--cyan);text-decoration-thickness:3px}
 .institutional-split .card-photo{max-width:520px;margin-top:12px}
 h1,h2,h3{hyphens:none;word-break:normal;overflow-wrap:normal}
+
+
+/* ===== Rodada UX: acessibilidade e toque ===== */
+.skip-link{
+  position:absolute;left:16px;top:-80px;z-index:100;
+  padding:12px 18px;border-radius:10px;color:var(--white);background:var(--navy);font-weight:700;
+}
+.skip-link:focus{top:12px}
+
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{
+  outline:3px solid var(--cyan);outline-offset:3px;
+}
+.quote-form input:focus-visible,.quote-form select:focus-visible,
+.contact-form input:focus-visible,.contact-form select:focus-visible,.contact-form textarea:focus-visible{
+  outline:3px solid var(--cyan);outline-offset:1px;
+}
+
+/* Campos com 16px evitam zoom automático no iPhone */
+.quote-form input,.quote-form select{font-size:1rem}
+
+/* Ícones SVG */
+.icon{width:1em;height:1em;flex:none;vertical-align:-.125em}
+
+/* Erros de formulário */
+/* Sem vermelho: a marca usa só a paleta; o erro é indicado por texto + ícone + borda */
+.field-error{display:flex;align-items:center;gap:6px;margin-top:4px;color:var(--navy);font-size:.85rem;font-weight:700}
+.field-error:before{content:"!";display:grid;place-items:center;width:18px;height:18px;border-radius:50%;color:var(--white);background:var(--royal);font-size:.75rem}
+.quote-form .field-error{color:var(--white)}
+.quote-form .field-error:before{color:var(--navy);background:var(--white)}
+[aria-invalid="true"]{border:2px solid var(--royal)!important}
+.quote-form [aria-invalid="true"]{border-color:var(--white)!important}
+
+/* Alvos de toque de no mínimo 44px */
+.footer-col a,.footer-col p{display:flex;align-items:center;min-height:44px;margin:0}
+.institutional-list a,.nearby a{min-height:44px}
+.faq-question{min-height:52px}
+
+/* Rodapé: todas as linhas de contato com o mesmo estilo */
+.footer-col a,.footer-col p{color:rgba(255,255,255,.78);font-size:.86rem;font-weight:400;font-family:var(--font-body);line-height:1.4}
+
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1!important;transform:none!important}
+  .btn:hover,.institutional-service-card:hover,.location-card:hover{transform:none}
+}
+
+@media(max-width:760px){
+  body{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+  .mobile-bottom{padding-bottom:calc(7px + env(safe-area-inset-bottom))}
+  .mobile-bottom a{min-height:48px}
+  .floating-wa{bottom:calc(22px + env(safe-area-inset-bottom))}
+}
+.intro-copy .card-photo{max-width:520px;margin-top:8px}
+
+/* ===== Rodada UX: componentes estruturais ===== */
+
+/* Faixa de confiança (abaixo dos heroes) */
+.trust-strip{border-block:1px solid var(--line);background:var(--white)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:28px 0}
+.trust-item{display:flex;align-items:flex-start;gap:12px}
+.trust-icon{
+  display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:12px;
+  color:var(--royal);background:var(--tint);font-size:1.3rem;
+}
+.trust-item strong{display:block;color:var(--navy);font-family:var(--font-title);font-weight:700;font-size:.98rem;line-height:1.3}
+.trust-item small{display:block;margin-top:2px;color:var(--muted);font-size:.86rem;line-height:1.4}
+
+/* Sinais de vazamento (home) */
+.signs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.sign-card{padding:24px;border:1px solid var(--line);border-radius:20px;background:var(--white)}
+.sign-icon{
+  display:grid;place-items:center;width:44px;height:44px;margin-bottom:16px;border-radius:50%;
+  color:var(--royal);background:var(--tint);font-size:1.3rem;
+}
+.sign-card h3{font-size:1.15rem}
+.sign-card p{margin:0;color:var(--muted);font-size:.95rem}
+
+/* CTA no fim de seção */
+.section-cta{margin-top:36px}
+
+/* Formulário escuro no meio da página */
+.quote-strip-section{margin-top:0;padding:28px 0}
+
+/* Listas de tipos de local e de regiões/serviços */
+.chip-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chip-list span{padding:8px 14px;border:1px solid var(--line);border-radius:999px;color:var(--ink-2);background:var(--soft);font-size:.9rem}
+.region-title{font-size:1.35rem}
+.region-links{list-style:none;margin:16px 0 0;padding:0;border-top:1px solid var(--line)}
+.region-links li{border-bottom:1px solid var(--line)}
+.region-links a{display:flex;align-items:center;gap:10px;min-height:52px;color:var(--navy);font-weight:700}
+.region-links a small{color:var(--muted);font-weight:400;font-size:.85rem}
+.region-links a .icon{margin-left:auto;color:var(--royal)}
+.region-links a:hover{color:var(--royal)}
+.coverage-services h3{color:var(--white);font-size:1.35rem}
+.coverage .region-links,.coverage .region-links li{border-color:rgba(255,255,255,.16)}
+.coverage .region-links a{color:var(--white)}
+.coverage .region-links a .icon{color:var(--cyan)}
+.coverage .region-links a:hover{color:var(--cyan)}
+
+/* Prova social (só aparece com conteúdo real) */
+.proof-card blockquote{margin:0 0 16px;color:var(--ink-2);font-size:1rem}
+.proof-card figcaption{color:var(--muted);font-size:.9rem}
+.proof-link{margin-top:28px}
+
+/* Botões de WhatsApp sobre fundo escuro: verde com texto marinho (contraste ~7:1) */
+.final-cta .btn-primary,.coverage .btn-primary,.quote-strip .btn-primary{
+  color:var(--navy);background:var(--whatsapp);box-shadow:0 13px 34px rgba(0,0,0,.18);
+}
+
+@media(max-width:1050px){
+  .trust-grid,.signs-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+  .trust-grid{grid-template-columns:1fr;gap:16px;padding:22px 0}
+  .signs-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){.institutional-service-card,.location-card{min-height:0}}
+/* Card local sem o mapa ilustrativo: uma coluna só */
+.local-card,.local-card[class]{grid-template-columns:1fr;min-height:0}
+/* Botão de telefone no rodapé: branco com texto marinho sobre o fundo escuro */
+footer .btn-primary{color:var(--navy);background:var(--white)}
+footer .btn-primary:hover{background:var(--tint)}

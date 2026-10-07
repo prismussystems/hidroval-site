@@ -5,12 +5,13 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   {# GTM <noscript> entra aqui quando o ID for definido. #}
   {% include "partials/topbar.njk" %}
   {% include "partials/header.njk" %}
   {% include "partials/mobile-menu.njk" %}
 
-  <main>
+  <main id="conteudo" tabindex="-1">
     {{ content | safe }}
   </main>
 

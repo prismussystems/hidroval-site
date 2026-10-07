@@ -1,7 +1,7 @@
+{% from "partials/icones.njk" import icone %}
 <section class="section coverage" id="cobertura">
   <div class="container coverage-grid">
     <div class="coverage-copy reveal">
-
       <h2>Caça vazamento {{ bairro.em or "em" }} {{ bairro.nome }} e bairros próximos.</h2>
 
       <p class="lead">
@@ -24,22 +24,14 @@
       </a>
     </div>
 
-    <div class="map-large reveal">
-      <svg viewBox="0 0 520 520" fill="none" aria-hidden="true">
-        <path d="M55 120c104 30 186 16 248-44 56 70 110 110 172 122M35 312c86-36 170-32 252 14 84-46 158-56 222-28M148 40c-10 90 14 168 72 236 48 54 62 122 44 204M348 34c28 84 16 158-32 224-54 74-58 148-12 222" stroke="rgba(255,255,255,.22)" stroke-width="3"/>
-        <circle cx="260" cy="260" r="110" stroke="rgba(0,184,255,.65)" stroke-width="3" stroke-dasharray="10 12"/>
-      </svg>
+    <div class="coverage-services reveal">
+      <h3>Serviços disponíveis {{ bairro.em or "em" }} {{ bairro.nome }}</h3>
 
-      <span class="district main d1">{{ bairro.nome }}</span>
-
-      {% for local in bairro.bairrosProximos | slice(0, 4) %}
-        <span class="district d{{ loop.index + 1 }}">{{ local.nome }}</span>
-      {% endfor %}
-
-      <div class="route-card">
-        <strong>Atendimento local</strong>
-        <span>Informe sua rua, condomínio ou ponto de referência para confirmar disponibilidade da equipe.</span>
-      </div>
+      <ul class="region-links">
+        {% for item in servicos %}
+          <li><a href="/{{ item.slug }}/">{{ item.nome }} {{ icone("seta") }}</a></li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </section>

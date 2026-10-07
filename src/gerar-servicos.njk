@@ -6,6 +6,6 @@ pagination:
 permalink: "{{ servico.slug }}/index.html"
 layout: layouts/pagina-servico.njk
 eleventyComputed:
-  title: "{{ servico.title }}"
-  description: "{{ servico.metaDescription }}"
+  title: "{{ servico.title | safe }}"
+  description: "{{ servico.metaDescription | safe }}"
 ---

@@ -7,3 +7,14 @@
     <strong>{{ bairro.nome }}</strong>
   </div>
 </div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Início", "item": {{ (site.url + "/") | dump | safe }} },
+    { "@type": "ListItem", "position": 2, "name": "Onde atendemos", "item": {{ (site.url + "/onde-atendemos/") | dump | safe }} },
+    { "@type": "ListItem", "position": 3, "name": {{ bairro.nome | dump | safe }}, "item": {{ (site.url + "/" + bairro.slug + "/") | dump | safe }} }
+  ]
+}
+</script>

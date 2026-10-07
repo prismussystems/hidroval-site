@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 ---
+{% from "partials/icones.njk" import icone %}
 
 {% include "partials/schema-servico.njk" %}
 
@@ -31,12 +32,6 @@ layout: layouts/base.njk
           {{ servico.ctaSecundario or "Como funciona" }}
         </a>
       </div>
-
-      <div class="hero-proof">
-        <span><b>✓</b> Atendimento residencial e comercial</span>
-        <span><b>✓</b> Orçamento via WhatsApp</span>
-        <span><b>✓</b> Detecção sem quebra-quebra</span>
-      </div>
     </div>
 
     <div class="service-hero-card reveal">
@@ -63,42 +58,7 @@ layout: layouts/base.njk
   </div>
 </section>
 
-<section class="quote-strip">
-  <div class="container quote-layout">
-    <div class="quote-title">
-      <strong>Solicite orientação inicial</strong>
-      <span>O formulário abre uma conversa no WhatsApp.</span>
-    </div>
-
-    <form
-      class="quote-form"
-      id="serviceForm"
-      data-servico="{{ servico.nome }}"
-      data-whatsapp="{{ site.whatsapp }}"
-    >
-      <label for="serviceName">Nome</label>
-      <input id="serviceName" type="text" placeholder="Seu nome" required>
-
-      <label for="serviceDistrict">Bairro</label>
-      <input id="serviceDistrict" type="text" placeholder="Seu bairro" required>
-
-      <label for="serviceProperty">Tipo de imóvel</label>
-      <select id="serviceProperty" required>
-        <option value="">Tipo de imóvel</option>
-        <option>Casa</option>
-        <option>Apartamento</option>
-        <option>Condomínio</option>
-        <option>Comércio</option>
-        <option>Empresa</option>
-        <option>Outro</option>
-      </select>
-
-      <button class="btn btn-primary" type="submit">
-        Consultar atendimento
-      </button>
-    </form>
-  </div>
-</section>
+{% include "partials/faixa-confianca.njk" %}
 
 <section class="section service-intro">
   <div class="container intro-grid">
@@ -108,7 +68,7 @@ layout: layouts/base.njk
       <div class="local-data">
         {% for item in servico.indicadoPara %}
           <div>
-            <i>✓</i>
+            <i>{{ icone("check") }}</i>
             <span>
               <b>{{ item.titulo }}</b>
               <span>{{ item.texto }}</span>
@@ -119,12 +79,15 @@ layout: layouts/base.njk
     </aside>
 
     <div class="intro-copy reveal">
-
       <h2>{{ servico.introTitulo }}</h2>
 
       {% for paragrafo in servico.introParagrafos %}
         <p>{{ paragrafo }}</p>
       {% endfor %}
+
+      {% if servico.foto %}
+        <img class="card-photo" src="{{ servico.foto }}" alt="{{ servico.fotoAlt }}" width="800" height="498" loading="lazy">
+      {% endif %}
     </div>
   </div>
 </section>
@@ -147,115 +110,96 @@ layout: layouts/base.njk
         </article>
       {% endfor %}
     </div>
+
+    <div class="section-cta reveal">
+      <a class="btn btn-primary" href="https://wa.me/{{ site.whatsapp }}?text={{ servico.whatsappMensagem | urlencode }}" target="_blank" rel="noopener">Falar com um técnico</a>
+    </div>
   </div>
 </section>
 
-<section class="section" id="como-funciona">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Como funciona</span>
-      <h2>{{ servico.processoTitulo or "Como funciona o atendimento?" }}</h2>
-      <p class="lead">
-        {{ servico.processoTexto }}
-      </p>
+{% set etapas = servico.etapas %}
+{% set processoTitulo = servico.processoTitulo %}
+{% set processoTexto = servico.processoTexto %}
+{% set whatsappMensagem = servico.whatsappMensagem %}
+{% include "partials/como-funciona.njk" %}
+
+<section class="quote-strip quote-strip-section">
+  <div class="container quote-layout">
+    <div class="quote-title">
+      <strong>Solicite orientação inicial</strong>
+      <span>O formulário abre uma conversa no WhatsApp.</span>
     </div>
 
-    <div class="process-list">
-      {% for etapa in servico.etapas %}
-        <div class="step reveal">
-          <div class="step-num">{{ "0" + loop.index if loop.index < 10 else loop.index }}</div>
-          <div>
-            <h3>{{ etapa.titulo }}</h3>
-            <p>{{ etapa.texto }}</p>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
+    <form
+      novalidate
+      class="quote-form"
+      id="serviceForm"
+      data-servico="{{ servico.nome }}"
+      data-whatsapp="{{ site.whatsapp }}"
+    >
+      <div class="field">
+        <label for="serviceName">Nome</label>
+        <input id="serviceName" type="text" autocomplete="name" placeholder="Seu nome" required>
+      </div>
+
+      <div class="field">
+        <label for="serviceDistrict">Bairro</label>
+        <input id="serviceDistrict" type="text" placeholder="Seu bairro" required>
+      </div>
+
+      <div class="field">
+        <label for="serviceProperty">Tipo de imóvel</label>
+        <select id="serviceProperty" required>
+          <option value="">Selecione</option>
+          <option>Casa</option>
+          <option>Apartamento</option>
+          <option>Condomínio</option>
+          <option>Comércio</option>
+          <option>Empresa</option>
+          <option>Outro</option>
+        </select>
+      </div>
+
+      <button class="btn btn-primary" type="submit">
+        Consultar atendimento
+      </button>
+    </form>
   </div>
 </section>
 
 <section class="section service-coverage">
   <div class="container institutional-split">
     <div class="reveal">
-
       <h2>{{ servico.locaisTitulo or "Atendimento em residências, condomínios e empresas." }}</h2>
 
       <p class="lead">
         {{ servico.locaisTexto }}
       </p>
 
-      <a
-        class="btn btn-primary"
-        href="https://wa.me/{{ site.whatsapp }}?text={{ servico.whatsappMensagem | urlencode }}"
-        target="_blank"
-        rel="noopener"
-      >
-        Falar com especialista
-      </a>
-    </div>
-
-    <div class="institutional-list reveal">
-      {% for local in servico.locais %}
-        <a href="{{ local.url or '/contato/' }}">{{ local.nome }}</a>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section institutional-band">
-  <div class="container">
-    <div class="section-head reveal">
-
-      <h2>{{ servico.regioesTitulo or "Atendimento em " + site.cidade + " e bairros próximos." }}</h2>
-
-      <p class="lead">
-        {{ servico.regioesTexto or "A disponibilidade pode variar conforme agenda, urgência e localização. Informe seu bairro pelo WhatsApp para confirmar o atendimento." }}
-      </p>
-    </div>
-
-    <div class="locations-grid">
-      {% for bairro in bairros | slice(0, 9) %}
-        {% for item in bairro %}
-          <article class="location-card reveal">
-            <span>{{ item.regiao }}</span>
-            <h3>{{ item.nome }}</h3>
-            <p>{{ servico.nome }} {{ item.em or "em" }} {{ item.nome }} para residências, condomínios, comércios e empresas.</p>
-            <a href="/{{ item.slug }}/">Ver região →</a>
-          </article>
+      <div class="chip-list">
+        {% for local in servico.locais %}
+          <span>{{ local.nome }}</span>
         {% endfor %}
-      {% endfor %}
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="region-title">{{ servico.regioesTitulo or ("Atendimento em " + site.cidade + ".") }}</h3>
+      <p>{{ servico.regioesTexto }}</p>
+
+      <ul class="region-links">
+        {% for item in bairros %}
+          <li><a href="/{{ item.slug }}/">{{ item.nome }} <small>{{ item.regiao }}</small> {{ icone("seta") }}</a></li>
+        {% endfor %}
+        <li><a href="/onde-atendemos/">Todas as regiões {{ icone("seta") }}</a></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="section faq" id="faq">
-  <div class="container faq-wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Dúvidas frequentes</span>
-
-      <h2>Perguntas sobre {{ servico.nome | lower }}.</h2>
-
-      <p class="lead">
-        Veja respostas rápidas antes de chamar a equipe pelo WhatsApp.
-      </p>
-    </div>
-
-    <div class="faq-list reveal">
-      {% for item in servico.faq %}
-        <div class="faq-item">
-          <button class="faq-question" type="button">
-            <span>{{ item.pergunta }}</span>
-            <span>+</span>
-          </button>
-
-          <div class="faq-answer">
-            <p>{{ item.resposta }}</p>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+{% set faqItens = servico.faq %}
+{% set faqTitulo = "Perguntas sobre " + (servico.nome | lower) + "." %}
+{% include "partials/faq.njk" %}
 
 <section class="final-cta" data-bg="{{ servico.textoDecorativo }}">
   <div class="container cta-grid">

@@ -2,17 +2,23 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "{{ site.url }}/{{ servico.slug }}/#service",
-  "name": "{{ servico.nome }}",
+  "@id": {{ (site.url + "/" + servico.slug + "/#service") | dump | safe }},
+  "name": {{ servico.nome | dump | safe }},
   "serviceType": "Detecção de vazamento de água",
-  "provider": {
-    "@id": "{{ site.url }}/#localbusiness"
-  },
-  "areaServed": {
-    "@type": "City",
-    "name": "{{ site.cidade }}"
-  },
-  "url": "{{ site.url }}/{{ servico.slug }}/",
-  "description": "{{ servico.metaDescription }}"
+  "provider": { "@id": {{ (site.url + "/#localbusiness") | dump | safe }} },
+  "areaServed": { "@type": "City", "name": {{ site.cidade | dump | safe }} },
+  "url": {{ (site.url + "/" + servico.slug + "/") | dump | safe }},
+  "description": {{ servico.metaDescription | dump | safe }}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Início", "item": {{ (site.url + "/") | dump | safe }} },
+    { "@type": "ListItem", "position": 2, "name": "Serviços", "item": {{ (site.url + "/servicos/") | dump | safe }} },
+    { "@type": "ListItem", "position": 3, "name": {{ servico.nome | dump | safe }}, "item": {{ (site.url + "/" + servico.slug + "/") | dump | safe }} }
+  ]
 }
 </script>

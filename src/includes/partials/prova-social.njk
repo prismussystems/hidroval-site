@@ -1,0 +1,28 @@
+{# Só aparece quando src/data/prova.json tiver conteúdo real. #}
+{% if prova.depoimentos.length or prova.linkAvaliacoes %}
+<section class="section proof">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>{{ prova.titulo }}</h2>
+      {% if prova.notaGoogle %}
+        <p class="lead">Nota {{ prova.notaGoogle }} no Google{% if prova.totalAvaliacoes %}, com {{ prova.totalAvaliacoes }} avaliações{% endif %}.</p>
+      {% endif %}
+    </div>
+
+    {% if prova.depoimentos.length %}
+      <div class="institutional-card-grid">
+        {% for item in prova.depoimentos %}
+          <figure class="institutional-service-card proof-card reveal">
+            <blockquote>{{ item.texto }}</blockquote>
+            <figcaption><strong>{{ item.nome }}</strong>{% if item.bairro %}, {{ item.bairro }}{% endif %}</figcaption>
+          </figure>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if prova.linkAvaliacoes %}
+      <p class="proof-link"><a class="btn btn-outline" href="{{ prova.linkAvaliacoes }}" target="_blank" rel="noopener">Ver avaliações no Google</a></p>
+    {% endif %}
+  </div>
+</section>
+{% endif %}

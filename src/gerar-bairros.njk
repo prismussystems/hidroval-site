@@ -6,6 +6,6 @@ pagination:
 permalink: "{{ bairro.slug }}/index.html"
 layout: layouts/pagina-local.njk
 eleventyComputed:
-  title: "{{ bairro.title }}"
-  description: "{{ bairro.metaDescription }}"
+  title: "{{ bairro.title | safe }}"
+  description: "{{ bairro.metaDescription | safe }}"
 ---

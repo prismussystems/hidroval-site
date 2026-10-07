@@ -1,3 +1,4 @@
+{% from "partials/icones.njk" import icone %}
 <section class="section local-intro">
   <div class="container intro-grid">
     <aside class="intro-aside reveal">
@@ -5,7 +6,7 @@
 
       <div class="local-data">
         <div>
-          <i>⌖</i>
+          <i>{{ icone("pin") }}</i>
           <span>
             <b>Região</b>
             <span>{{ bairro.nome }}, {{ bairro.regiao }}</span>
@@ -13,7 +14,7 @@
         </div>
 
         <div>
-          <i>⌂</i>
+          <i>{{ icone("casa") }}</i>
           <span>
             <b>Imóveis atendidos</b>
             <span>Casas, apartamentos, condomínios, comércios e empresas</span>
@@ -21,7 +22,7 @@
         </div>
 
         <div>
-          <i>◷</i>
+          <i>{{ icone("relogio") }}</i>
           <span>
             <b>Disponibilidade</b>
             <span>{{ site.atendimento }}</span>
@@ -29,7 +30,7 @@
         </div>
 
         <div>
-          <i>☎</i>
+          <i>{{ icone("telefone") }}</i>
           <span>
             <b>Contato</b>
             <span>{{ site.telefone }}</span>
