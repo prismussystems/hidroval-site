@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      const bairro = form.dataset.bairro || "São Paulo";
+      const bairro = form.dataset.bairro || "minha região";
       const whatsapp = form.dataset.whatsapp;
       const nome = document.querySelector("#name")?.value.trim();
       const street = document.querySelector("#street")?.value.trim();
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      const message = `Olá, meu nome é ${nome}. Estou em ${bairro}, próximo de ${street}. Preciso de atendimento para ${problem}. Gostaria de receber orientação e orçamento.`;
+      const message = `Olá, meu nome é ${nome}. Estou em ${bairro}, próximo de ${street}. Estou com o seguinte problema: ${problem}. Gostaria de receber orientação e orçamento.`;
 
       window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`, "_blank");
     });
@@ -71,7 +71,7 @@ if (serviceForm) {
     event.preventDefault();
 
     const whatsapp = serviceForm.dataset.whatsapp;
-    const servico = serviceForm.dataset.servico || "controle de pragas";
+    const servico = serviceForm.dataset.servico || "detecção de vazamento";
 
     const nome = document.querySelector("#serviceName")?.value.trim();
     const bairro = document.querySelector("#serviceDistrict")?.value.trim();
@@ -86,6 +86,33 @@ if (serviceForm) {
     window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`, "_blank");
   });
 }
+
+  const contactForm = document.querySelector("#contactForm");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const whatsapp = contactForm.dataset.whatsapp;
+      const nome = document.querySelector("#contactName")?.value.trim();
+      const bairro = document.querySelector("#contactDistrict")?.value.trim();
+      const tipoImovel = document.querySelector("#contactProperty")?.value.trim();
+      const problema = document.querySelector("#contactProblem")?.value.trim();
+      const detalhes = document.querySelector("#contactMessage")?.value.trim();
+
+      if (!whatsapp || !nome || !bairro || !tipoImovel || !problema) {
+        return;
+      }
+
+      let message = `Olá, meu nome é ${nome}. Estou no bairro ${bairro}. O imóvel é ${tipoImovel}. Problema: ${problema}.`;
+
+      if (detalhes) {
+        message += ` Detalhes: ${detalhes}`;
+      }
+
+      window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`, "_blank");
+    });
+  }
 
   document.querySelectorAll(".faq-question").forEach(function (button) {
     button.addEventListener("click", function () {

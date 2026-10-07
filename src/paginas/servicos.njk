@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
-title: "Serviços de Dedetização | ImuniziPrag Dedetização"
-description: "Conheça os serviços da ImuniziPrag: dedetização, desratização, descupinização e controle de pragas para residências, condomínios, restaurantes e empresas."
+title: "Serviços de Caça Vazamento em [CIDADE] | Hidroval Caça Vazamento"
+description: "Detecção de vazamento com geofone, vazamento em piscina, caixa d'água, parede e piso, conta de água alta e detecção sem quebra-quebra em [CIDADE]."
 permalink: "/servicos/"
 ---
 
@@ -9,20 +9,15 @@ permalink: "/servicos/"
   <div class="container">
     <span class="eyebrow">Serviços</span>
 
-    <h1>Serviços de controle de pragas</h1>
+    <h1>Serviços de detecção de vazamento</h1>
 
     <p class="lead">
-      A ImuniziPrag Dedetização realiza controle profissional de pragas para residências, condomínios, restaurantes, clínicas, comércios e empresas em São Paulo.
+      A {{ site.empresa }} localiza vazamentos de água em residências, condomínios, comércios e empresas em {{ site.cidade }}, com equipamentos de detecção e sem quebra-quebra.
     </p>
 
     <div class="hero-actions">
-      <a
-        class="btn btn-primary"
-        href="https://wa.me/{{ site.whatsapp }}?text=Olá%2C%20gostaria%20de%20receber%20atendimento%20para%20controle%20de%20pragas."
-        target="_blank"
-        rel="noopener"
-      >
-        Receber atendimento rápido
+      <a class="btn btn-primary" href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsappMensagem | urlencode }}" target="_blank" rel="noopener">
+        Pedir orçamento
       </a>
 
       <a class="btn btn-outline" href="/onde-atendemos/">
@@ -37,61 +32,24 @@ permalink: "/servicos/"
     <div class="section-head reveal">
       <span class="eyebrow">Principais serviços</span>
 
-      <h2>Soluções para diferentes tipos de infestação.</h2>
+      <h2>Soluções para diferentes tipos de vazamento.</h2>
 
       <p class="lead">
-        Cada praga exige um cuidado específico. Por isso, o atendimento considera o tipo de imóvel, os sinais encontrados, o nível de infestação e os pontos de acesso das pragas.
+        O atendimento considera o tipo de imóvel, os sinais encontrados e o trajeto da tubulação para chegar ao ponto exato do vazamento.
       </p>
     </div>
 
     <div class="institutional-card-grid">
-      <article class="institutional-service-card reveal">
-        <span>01</span>
-        <h3>Dedetização</h3>
-        <p>
-          Controle de baratas, formigas, escorpiões, pulgas, carrapatos, traças, aranhas, percevejos de cama e outras pragas urbanas.
-        </p>
-      </article>
-
-      <article class="institutional-service-card reveal">
-        <span>02</span>
-        <h3>Desratização</h3>
-        <p>
-          Controle de ratos e roedores em casas, condomínios, restaurantes, empresas, garagens, áreas externas, depósitos e locais de armazenamento.
-        </p>
-      </article>
-
-      <article class="institutional-service-card reveal">
-        <span>03</span>
-        <h3>Descupinização</h3>
-        <p>
-          Tratamento contra cupins em móveis, portas, batentes, rodapés, armários, estruturas de madeira e pontos com sinais de infestação.
-        </p>
-      </article>
-
-      <article class="institutional-service-card reveal">
-        <span>04</span>
-        <h3>Dedetização residencial</h3>
-        <p>
-          Atendimento para casas e apartamentos com foco em segurança, orientação preventiva e redução de riscos de retorno das pragas.
-        </p>
-      </article>
-
-      <article class="institutional-service-card reveal">
-        <span>05</span>
-        <h3>Dedetização para condomínios</h3>
-        <p>
-          Controle de pragas em áreas comuns, garagens, lixeiras, jardins, salões, shafts, áreas técnicas e pontos de circulação.
-        </p>
-      </article>
-
-      <article class="institutional-service-card reveal">
-        <span>06</span>
-        <h3>Dedetização para empresas</h3>
-        <p>
-          Atendimento para restaurantes, clínicas, escritórios, lojas, comércios e empresas que precisam de controle técnico e emissão de certificado.
-        </p>
-      </article>
+      {% for item in servicos %}
+        <article class="institutional-service-card reveal">
+          {% if item.foto %}
+            <img class="card-photo" src="{{ item.foto }}" alt="{{ item.fotoAlt }}" width="800" height="498" loading="lazy">
+          {% endif %}
+          <span>{{ "0" + loop.index if loop.index < 10 else loop.index }}</span>
+          <h3><a href="/{{ item.slug }}/">{{ item.nome }}</a></h3>
+          <p>{{ item.resumo }}</p>
+        </article>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -99,35 +57,23 @@ permalink: "/servicos/"
 <section class="section institutional-band">
   <div class="container institutional-split">
     <div class="reveal">
-      <span class="eyebrow">Pragas atendidas</span>
+      <span class="eyebrow">Problemas que resolvemos</span>
 
-      <h2>Controle para as principais pragas urbanas.</h2>
+      <h2>Onde a água pode estar escapando.</h2>
 
       <p class="lead">
-        A ImuniziPrag atua no controle de pragas que podem comprometer a higiene, a segurança, a rotina do imóvel e a operação de empresas.
+        Vazamentos podem estar em tubulações embutidas, enterradas, reservatórios ou piscinas. Escolha o serviço mais próximo do seu problema.
       </p>
 
-      <a
-        class="btn btn-primary"
-        href="https://wa.me/{{ site.whatsapp }}?text=Olá%2C%20gostaria%20de%20saber%20qual%20serviço%20é%20indicado%20para%20meu%20problema%20com%20pragas."
-        target="_blank"
-        rel="noopener"
-      >
+      <a class="btn btn-primary" href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsappMensagem | urlencode }}" target="_blank" rel="noopener">
         Falar com especialista
       </a>
     </div>
 
     <div class="institutional-list reveal">
-      <a href="/dedetizacao-de-baratas/">Baratas</a>
-      <a href="/dedetizacao-de-ratos/">Ratos</a>
-      <a href="/dedetizacao-de-cupim/">Cupins</a>
-      <a href="/dedetizacao-de-formigas/">Formigas</a>
-      <a href="/dedetizacao-de-escorpiao/">Escorpiões</a>
-      <a href="/dedetizacao-de-pulgas/">Pulgas</a>
-      <a href="/dedetizacao-de-carrapatos/">Carrapatos</a>
-      <a href="/dedetizacao-de-percevejos-de-cama/">Percevejos de cama</a>
-      <a href="/dedetizacao-de-tracas/">Traças</a>
-      <a href="/dedetizacao-para-restaurantes/">Restaurantes</a>
+      {% for item in servicos %}
+        <a href="/{{ item.slug }}/">{{ item.nomeCurto or item.nome }}</a>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -137,7 +83,7 @@ permalink: "/servicos/"
     <div class="section-head reveal">
       <span class="eyebrow">Como funciona</span>
 
-      <h2>Do primeiro contato ao atendimento técnico.</h2>
+      <h2>Do primeiro contato à localização do vazamento.</h2>
 
       <p class="lead">
         O processo começa pelo WhatsApp, com uma orientação inicial para entender o problema e direcionar o atendimento.
@@ -149,39 +95,31 @@ permalink: "/servicos/"
         <div class="step-num">01</div>
         <div>
           <h3>Você informa o problema</h3>
-          <p>
-            Envie pelo WhatsApp o bairro, tipo de imóvel, praga encontrada e principais pontos onde os sinais apareceram.
-          </p>
+          <p>Envie pelo WhatsApp o bairro, o tipo de imóvel e os sinais que percebeu: conta alta, manchas, umidade ou hidrômetro girando.</p>
         </div>
       </div>
 
       <div class="step reveal">
         <div class="step-num">02</div>
         <div>
-          <h3>A equipe orienta o atendimento</h3>
-          <p>
-            A ImuniziPrag avalia as informações iniciais e indica o melhor caminho para orçamento, vistoria ou agendamento.
-          </p>
+          <h3>Confirmamos o vazamento</h3>
+          <p>No local, o técnico faz o teste do hidrômetro e da pressão da rede para confirmar se há perda de água.</p>
         </div>
       </div>
 
       <div class="step reveal">
         <div class="step-num">03</div>
         <div>
-          <h3>O serviço é executado</h3>
-          <p>
-            O atendimento é realizado conforme o tipo de praga, características do imóvel e procedimento indicado.
-          </p>
+          <h3>Localizamos o ponto exato</h3>
+          <p>Com geofone e outros equipamentos, o trajeto da tubulação é percorrido até encontrar o vazamento, sem quebrar.</p>
         </div>
       </div>
 
       <div class="step reveal">
         <div class="step-num">04</div>
         <div>
-          <h3>Você recebe orientações finais</h3>
-          <p>
-            Após o serviço, a equipe orienta sobre cuidados para reduzir o risco de retorno das pragas.
-          </p>
+          <h3>Orientamos o reparo</h3>
+          <p>O ponto é marcado e você recebe a orientação para o reparo, com abertura apenas onde for necessário.</p>
         </div>
       </div>
     </div>
@@ -193,10 +131,10 @@ permalink: "/servicos/"
     <div class="section-head reveal">
       <span class="eyebrow">Tipos de imóveis</span>
 
-      <h2>Atendimento residencial, comercial e empresarial.</h2>
+      <h2>Atendimento residencial, condominial e comercial.</h2>
 
       <p class="lead">
-        O controle de pragas pode ser adaptado para diferentes ambientes, desde apartamentos e casas até restaurantes, clínicas, condomínios e empresas.
+        A detecção de vazamento se adapta a diferentes imóveis, de apartamentos a galpões.
       </p>
     </div>
 
@@ -204,25 +142,19 @@ permalink: "/servicos/"
       <article class="institutional-service-card reveal">
         <span>Residencial</span>
         <h3>Casas e apartamentos</h3>
-        <p>
-          Controle de pragas em cozinhas, áreas de serviço, banheiros, dormitórios, jardins, quintais, forros e demais áreas do imóvel.
-        </p>
+        <p>Banheiros, cozinhas, áreas de serviço, quintais, caixas d'água e piscinas.</p>
       </article>
 
       <article class="institutional-service-card reveal">
         <span>Condomínios</span>
         <h3>Áreas comuns</h3>
-        <p>
-          Atendimento para garagens, lixeiras, jardins, halls, escadas, salões, áreas técnicas, depósitos e pontos de circulação.
-        </p>
+        <p>Prumadas, barriletes, reservatórios, garagens, piscinas e redes de distribuição.</p>
       </article>
 
       <article class="institutional-service-card reveal">
         <span>Comercial</span>
-        <h3>Restaurantes e empresas</h3>
-        <p>
-          Controle de pragas para cozinhas comerciais, estoques, áreas de atendimento, escritórios, clínicas, lojas e empresas.
-        </p>
+        <h3>Comércios e empresas</h3>
+        <p>Lojas, escritórios e galpões com consumo de água fora do normal.</p>
       </article>
     </div>
   </div>
@@ -232,22 +164,15 @@ permalink: "/servicos/"
   <div class="container cta-grid">
     <div>
       <h2>Não sabe qual serviço contratar?</h2>
-
       <p>
-        Fale com a ImuniziPrag pelo WhatsApp, explique o problema e receba orientação sobre o serviço mais indicado para o seu imóvel.
+        Fale com a Hidroval pelo WhatsApp, explique o que está acontecendo e receba orientação sobre o serviço mais indicado.
       </p>
     </div>
 
     <div>
-      <a
-        class="btn btn-primary"
-        href="https://wa.me/{{ site.whatsapp }}?text=Olá%2C%20não%20sei%20qual%20serviço%20de%20controle%20de%20pragas%20preciso.%20Podem%20me%20orientar%3F"
-        target="_blank"
-        rel="noopener"
-      >
+      <a class="btn btn-primary" href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsappMensagem | urlencode }}" target="_blank" rel="noopener">
         Falar com especialista
       </a>
     </div>
   </div>
-  
 </section>

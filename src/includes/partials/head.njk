@@ -8,14 +8,28 @@
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 {% endif %}
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700;900&display=swap">
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icone_32px.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icone_192px.png">
+<link rel="apple-touch-icon" href="/assets/img/icone_192px.png">
 <link rel="manifest" href="/assets/img/site.webmanifest">
+<meta name="theme-color" content="#02295F">
 
 <meta property="og:title" content="{{ title or site.empresa }}">
 <meta property="og:description" content="{{ description or site.descricaoPadrao }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:site_name" content="{{ site.empresa }}">
+
+{#
+  ANALYTICS / TAG MANAGER / PIXEL
+  Inserir aqui os scripts quando os IDs forem definidos:
+  - Google Tag Manager: [GTM-ID]
+  - Google Analytics 4: [GA4-ID]
+  - Pixel Meta: [PIXEL-ID]
+  (O <noscript> do GTM vai logo após a abertura do <body> em layouts/base.njk.)
+#}

@@ -20,17 +20,7 @@
       <label for="problem">Tipo de problema</label>
       <select id="problem" required>
         <option value="">Qual é o problema?</option>
-        <option>Baratas</option>
-        <option>Formigas</option>
-        <option>Cupins</option>
-        <option>Ratos</option>
-        <option>Aranhas</option>
-        <option>Pulgas</option>
-        <option>Escorpiões</option>
-        <option>Carrapatos</option>
-        <option>Percevejos de cama</option>
-        <option>Traças</option>
-        <option>Outro</option>
+        {% include "partials/opcoes-problema.njk" %}
       </select>
 
       <button class="btn btn-primary" type="submit">

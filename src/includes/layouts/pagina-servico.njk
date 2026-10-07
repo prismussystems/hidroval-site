@@ -24,7 +24,7 @@ layout: layouts/base.njk
           target="_blank"
           rel="noopener"
         >
-          {{ servico.ctaPrincipal or "Receber atendimento rápido" }}
+          {{ servico.ctaPrincipal or "Pedir orçamento" }}
         </a>
 
         <a class="btn btn-outline" href="#como-funciona">
@@ -35,23 +35,29 @@ layout: layouts/base.njk
       <div class="hero-proof">
         <span><b>✓</b> Atendimento residencial e comercial</span>
         <span><b>✓</b> Orçamento via WhatsApp</span>
-        <span><b>✓</b> Produtos regulamentados</span>
+        <span><b>✓</b> Detecção sem quebra-quebra</span>
       </div>
     </div>
 
     <div class="service-hero-card reveal">
-      <img
-        src="{{ servico.imagem or '/assets/img/hero-controle-pragas.webp' }}"
-        alt="{{ servico.imagemAlt or servico.h1 }}"
-        width="1024"
-        height="746"
-        loading="eager"
-        fetchpriority="high"
-      >
+      {% if servico.imagem %}
+        <img
+          src="{{ servico.imagem }}"
+          alt="{{ servico.imagemAlt or servico.h1 }}"
+          width="1024"
+          height="746"
+          loading="eager"
+          fetchpriority="high"
+        >
+      {% else %}
+        <div class="media-placeholder" role="img" aria-label="{{ servico.imagemAlt or servico.h1 }}">
+          <span>[IMG: {{ servico.imagemEsperada }}]</span>
+        </div>
+      {% endif %}
 
       <div class="service-hero-badge">
         <strong>{{ servico.nome }}</strong>
-        <span>Controle profissional de pragas</span>
+        <span>{{ site.empresa }}</span>
       </div>
     </div>
   </div>
@@ -82,8 +88,6 @@ layout: layouts/base.njk
         <option>Casa</option>
         <option>Apartamento</option>
         <option>Condomínio</option>
-        <option>Restaurante</option>
-        <option>Clínica</option>
         <option>Comércio</option>
         <option>Empresa</option>
         <option>Outro</option>
@@ -130,7 +134,7 @@ layout: layouts/base.njk
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Sinais de alerta</span>
-      <h2>{{ servico.sinaisTitulo or "Quando chamar uma dedetizadora?" }}</h2>
+      <h2>{{ servico.sinaisTitulo or "Quando chamar um caça vazamento?" }}</h2>
       <p class="lead">
         {{ servico.sinaisTexto }}
       </p>
@@ -206,7 +210,7 @@ layout: layouts/base.njk
     <div class="section-head reveal">
       <span class="eyebrow">Regiões atendidas</span>
 
-      <h2>{{ servico.regioesTitulo or "Atendimento em São Paulo e bairros próximos." }}</h2>
+      <h2>{{ servico.regioesTitulo or "Atendimento em " + site.cidade + " e bairros próximos." }}</h2>
 
       <p class="lead">
         {{ servico.regioesTexto or "A disponibilidade pode variar conforme agenda, urgência e localização. Informe seu bairro pelo WhatsApp para confirmar o atendimento." }}
@@ -274,7 +278,7 @@ layout: layouts/base.njk
         target="_blank"
         rel="noopener"
       >
-        Receber atendimento rápido
+        Pedir orçamento
       </a>
     </div>
   </div>

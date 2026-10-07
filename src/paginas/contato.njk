@@ -1,8 +1,98 @@
---- 
-layout: layouts/base.njk 
-title: "Contato | ImuniziPrag Dedetização" 
-description: "Entre em contato com a ImuniziPrag Dedetização pelo WhatsApp, telefone ou e-mail e solicite atendimento para controle de pragas." 
-permalink: "/contato/" 
---- 
-<section class="institutional-page-hero"> 
-  <div class="container"> <span class="eyebrow">Contato</span> <h1>Fale com a ImuniziPrag</h1> <p class="lead"> Precisa de dedetização, desratização, descupinização ou controle de pragas? Envie uma mensagem e receba orientação inicial. </p> </div> </section> <section class="section"> <div class="container institutional-split"> <div class="contact-panel reveal"> <span class="eyebrow">Atendimento rápido</span> <h2>Solicite orientação pelo WhatsApp.</h2> <p> Informe seu nome, bairro, tipo de imóvel e qual praga está aparecendo. Com essas informações, a equipe consegue orientar o atendimento com mais agilidade. </p> <form class="contact-form" id="contactForm" data-whatsapp="{{ site.whatsapp }}"> <label for="contactName">Nome</label> <input id="contactName" type="text" placeholder="Seu nome" required> <label for="contactDistrict">Bairro</label> <input id="contactDistrict" type="text" placeholder="Seu bairro" required> <label for="contactProperty">Tipo de imóvel</label> <select id="contactProperty" required> <option value="">Selecione o tipo de imóvel</option> <option>Casa</option> <option>Apartamento</option> <option>Condomínio</option> <option>Restaurante</option> <option>Clínica</option> <option>Comércio</option> <option>Empresa</option> <option>Outro</option> </select> <label for="contactProblem">Tipo de problema</label> <select id="contactProblem" required> <option value="">Qual é o problema?</option> <option>Baratas</option> <option>Formigas</option> <option>Cupins</option> <option>Ratos</option> <option>Aranhas</option> <option>Pulgas</option> <option>Escorpiões</option> <option>Carrapatos</option> <option>Percevejos de cama</option> <option>Traças</option> <option>Outro</option> </select> <label for="contactMessage">Mensagem</label> <textarea id="contactMessage" rows="4" placeholder="Descreva rapidamente o que está acontecendo"></textarea> <button class="btn btn-primary" type="submit"> Enviar pelo WhatsApp </button> </form> </div> <aside class="institutional-info-card reveal"> <strong>Canais de contato</strong> <div> <b>Telefone / WhatsApp</b> <a href="tel:{{ site.telefoneLink }}">{{ site.telefone }}</a> </div> <div> <b>E-mail</b> <a href="mailto:{{ site.email }}">{{ site.email }}</a> </div> <div> <b>Endereço</b> <span>{{ site.endereco }}</span> </div> <div> <b>Atendimento</b> <span>{{ site.atendimento }}</span> </div> <div> <b>CNPJ</b> <span>{{ site.cnpj }}</span> </div> <a class="btn btn-primary" href="https://wa.me/{{ site.whatsapp }}?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento%20para%20controle%20de%20pragas." target="_blank" rel="noopener" > Chamar no WhatsApp </a> </aside> </div> </section>
+---
+layout: layouts/base.njk
+title: "Contato | Hidroval Caça Vazamento"
+description: "Entre em contato com a Hidroval Caça Vazamento pelo WhatsApp, telefone ou e-mail e solicite orçamento para detecção de vazamento em [CIDADE]."
+permalink: "/contato/"
+---
+
+<section class="institutional-page-hero">
+  <div class="container">
+    <span class="eyebrow">Contato</span>
+    <h1>Fale com a Hidroval</h1>
+    <p class="lead">
+      Conta de água alta, mancha na parede, piscina perdendo água ou vazamento escondido? Envie uma mensagem e receba orientação inicial.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container institutional-split">
+    <div class="contact-panel reveal">
+      <span class="eyebrow">Atendimento rápido</span>
+      <h2>Solicite orientação pelo WhatsApp.</h2>
+      <p>
+        Informe seu nome, bairro, tipo de imóvel e o que está acontecendo. Com essas informações, a equipe consegue orientar o atendimento com mais agilidade.
+      </p>
+
+      <form class="contact-form" id="contactForm" data-whatsapp="{{ site.whatsapp }}">
+        <label for="contactName">Nome</label>
+        <input id="contactName" type="text" placeholder="Seu nome" required>
+
+        <label for="contactDistrict">Bairro</label>
+        <input id="contactDistrict" type="text" placeholder="Seu bairro" required>
+
+        <label for="contactProperty">Tipo de imóvel</label>
+        <select id="contactProperty" required>
+          <option value="">Selecione o tipo de imóvel</option>
+          <option>Casa</option>
+          <option>Apartamento</option>
+          <option>Condomínio</option>
+          <option>Comércio</option>
+          <option>Empresa</option>
+          <option>Outro</option>
+        </select>
+
+        <label for="contactProblem">Tipo de problema</label>
+        <select id="contactProblem" required>
+          <option value="">Qual é o problema?</option>
+          {% include "partials/opcoes-problema.njk" %}
+        </select>
+
+        <label for="contactMessage">Mensagem</label>
+        <textarea id="contactMessage" rows="4" placeholder="Descreva rapidamente o que está acontecendo"></textarea>
+
+        <button class="btn btn-primary" type="submit">
+          Enviar pelo WhatsApp
+        </button>
+      </form>
+    </div>
+
+    <aside class="institutional-info-card reveal">
+      <strong>Canais de contato</strong>
+
+      <div>
+        <b>Telefone</b>
+        <a href="tel:{{ site.telefoneLink }}">{{ site.telefone }}</a>
+      </div>
+
+      <div>
+        <b>WhatsApp</b>
+        <a href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsappMensagem | urlencode }}" target="_blank" rel="noopener">{{ site.whatsapp }}</a>
+      </div>
+
+      <div>
+        <b>E-mail</b>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </div>
+
+      <div>
+        <b>Endereço</b>
+        <span>{{ site.endereco }}</span>
+      </div>
+
+      <div>
+        <b>Atendimento</b>
+        <span>{{ site.atendimento }}</span>
+      </div>
+
+      <div>
+        <b>CNPJ</b>
+        <span>{{ site.cnpj }}</span>
+      </div>
+
+      <a class="btn btn-primary" href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsappMensagem | urlencode }}" target="_blank" rel="noopener">
+        Chamar no WhatsApp
+      </a>
+    </aside>
+  </div>
+</section>

@@ -4,13 +4,13 @@
   "@type": "Service",
   "@id": "{{ site.url }}/{{ servico.slug }}/#service",
   "name": "{{ servico.nome }}",
-  "serviceType": "Controle de pragas",
+  "serviceType": "Detecção de vazamento de água",
   "provider": {
     "@id": "{{ site.url }}/#localbusiness"
   },
   "areaServed": {
     "@type": "City",
-    "name": "São Paulo"
+    "name": "{{ site.cidade }}"
   },
   "url": "{{ site.url }}/{{ servico.slug }}/",
   "description": "{{ servico.metaDescription }}"

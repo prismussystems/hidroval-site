@@ -1,16 +1,16 @@
 ---
 layout: layouts/base.njk
-title: "Sobre a ImuniziPrag Dedetização"
-description: "Conheça a ImuniziPrag Dedetização, empresa especializada em controle de pragas para residências, condomínios, comércios e empresas em São Paulo."
+title: "Sobre a Hidroval Caça Vazamento"
+description: "Conheça a Hidroval Caça Vazamento, especializada em detecção e reparo de vazamentos de água em [CIDADE] para residências, condomínios e empresas."
 permalink: "/sobre/"
 ---
 
 <section class="institutional-page-hero">
   <div class="container">
     <span class="eyebrow">Sobre a empresa</span>
-    <h1>Sobre a ImuniziPrag Dedetização</h1>
+    <h1>Sobre a Hidroval Caça Vazamento</h1>
     <p class="lead">
-      A {{ site.empresa }} atua no controle profissional de pragas em São Paulo, oferecendo atendimento para residências, condomínios, restaurantes, clínicas, comércios e empresas.
+      A {{ site.empresa }} é especializada em detecção e reparo de vazamentos de água em {{ site.cidade }}, com atendimento para residências, condomínios, comércios e empresas.
     </p>
   </div>
 </section>
@@ -19,19 +19,21 @@ permalink: "/sobre/"
   <div class="container institutional-split">
     <div class="reveal">
       <span class="eyebrow">Nossa atuação</span>
-      <h2>Atendimento técnico, rápido e orientado à solução.</h2>
+      <h2>Precisão para encontrar o vazamento, cuidado para preservar o imóvel.</h2>
 
       <p>
-        A ImuniziPrag trabalha com serviços de dedetização, desratização e descupinização, atendendo diferentes tipos de imóveis e necessidades. O objetivo é identificar o tipo de praga, entender as características do ambiente e indicar o tratamento mais adequado.
+        A Hidroval trabalha com equipamentos de detecção, como o geofone, para localizar vazamentos ocultos em tubulações embutidas e enterradas, caixas d'água e piscinas. O objetivo é chegar ao ponto exato do problema sem quebrar paredes e pisos à procura dele.
       </p>
 
       <p>
-        O atendimento pode ser solicitado pelo WhatsApp, facilitando o envio de informações iniciais como bairro, tipo de imóvel, praga encontrada e nível de urgência. A partir dessas informações, a equipe orienta o cliente e verifica a melhor forma de atendimento.
+        O atendimento pode ser solicitado pelo WhatsApp, com informações como bairro, tipo de imóvel e sinais percebidos. A partir disso, a equipe orienta o cliente e agenda a visita técnica.
       </p>
 
       <p>
-        A empresa atende imóveis residenciais e comerciais com foco em segurança, discrição, uso correto dos produtos e orientação preventiva para reduzir o risco de retorno das pragas.
+        Com o vazamento localizado, a abertura para o reparo fica restrita a uma área pequena, o que reduz custo, sujeira e tempo de obra.
       </p>
+
+      <img class="card-photo" src="/assets/img/reparo-tubulacao.webp" alt="Conexão de tubulação de água substituída após reparo de vazamento" width="800" height="545" loading="lazy">
     </div>
 
     <aside class="institutional-info-card reveal">
@@ -69,35 +71,35 @@ permalink: "/sobre/"
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Diferenciais</span>
-      <h2>Por que chamar a ImuniziPrag?</h2>
+      <h2>Por que chamar a Hidroval?</h2>
       <p class="lead">
-        Atendimento profissional para quem precisa resolver problemas com pragas urbanas com agilidade, segurança e orientação clara.
+        Atendimento técnico para quem precisa resolver um vazamento com agilidade, precisão e o mínimo de obra.
       </p>
     </div>
 
     <div class="institutional-card-grid">
       <article class="institutional-service-card reveal">
         <span>01</span>
-        <h3>Atendimento rápido</h3>
-        <p>Canal de contato pelo WhatsApp para orientar o cliente e agilizar o pedido de orçamento.</p>
+        <h3>Detecção com geofone</h3>
+        <p>Equipamento eletrônico que capta o ruído da água para localizar vazamentos ocultos.</p>
       </article>
 
       <article class="institutional-service-card reveal">
         <span>02</span>
-        <h3>Equipe especializada</h3>
-        <p>Profissionais preparados para avaliar o ambiente e indicar o tratamento mais adequado.</p>
+        <h3>Sem quebra-quebra</h3>
+        <p>A localização é feita sem abrir paredes e pisos. A abertura fica só no ponto do reparo.</p>
       </article>
 
       <article class="institutional-service-card reveal">
         <span>03</span>
         <h3>Residencial e comercial</h3>
-        <p>Atendimento para casas, apartamentos, condomínios, restaurantes, clínicas, lojas e empresas.</p>
+        <p>Atendimento para casas, apartamentos, condomínios, comércios e empresas.</p>
       </article>
 
       <article class="institutional-service-card reveal">
         <span>04</span>
-        <h3>Emissão de certificado</h3>
-        <p>Disponível para empresas, restaurantes, condomínios e estabelecimentos que precisam documentar o controle de pragas.</p>
+        <h3>Orçamento pelo WhatsApp</h3>
+        <p>Canal direto para enviar fotos, tirar dúvidas e agendar a visita técnica.</p>
       </article>
     </div>
   </div>
@@ -106,19 +108,14 @@ permalink: "/sobre/"
 <section class="final-cta" data-bg="SOBRE">
   <div class="container cta-grid">
     <div>
-      <h2>Fale com uma dedetizadora especializada.</h2>
+      <h2>Fale com um caça vazamento especializado.</h2>
       <p>
-        Entre em contato com a ImuniziPrag e receba orientação para controle de pragas no seu imóvel.
+        Entre em contato com a Hidroval e receba orientação para localizar o vazamento no seu imóvel.
       </p>
     </div>
 
     <div>
-      <a
-        class="btn btn-primary"
-        href="https://wa.me/{{ site.whatsapp }}?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20ImuniziPrag."
-        target="_blank"
-        rel="noopener"
-      >
+      <a class="btn btn-primary" href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsappMensagem | urlencode }}" target="_blank" rel="noopener">
         Falar com especialista
       </a>
     </div>

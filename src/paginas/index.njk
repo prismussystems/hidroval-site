@@ -1,41 +1,108 @@
---- 
-layout: layouts/base.njk 
-title: "ImuniziPrag Dedetização | Controle de Pragas em São Paulo" 
-description: "Dedetização, desratização e descupinização em São Paulo para residências, condomínios, restaurantes, comércios e empresas." 
-permalink: "/" 
---- 
-<section class="institutional-hero"> 
-    <div class="container institutional-hero-grid"> 
-        <div class="institutional-hero-copy reveal"> 
-            <span class="local-tag"><i></i> Atendimento 24 horas em São Paulo</span> 
-                <h1>Controle de pragas com atendimento rápido</h1> 
-                <p class="lead"> A {{ site.empresa }} atua com dedetização, desratização, descupinização e controle profissional de pragas para residências, condomínios, restaurantes, clínicas, comércios e empresas em São Paulo. </p> 
-                <div class="hero-actions"> <a class="btn btn-primary" href="https://wa.me/{{ site.whatsapp }}?text=Olá%2C%20gostaria%20de%20receber%20atendimento%20rápido%20para%20controle%20de%20pragas." target="_blank" rel="noopener" > Receber atendimento rápido </a> 
-                <a class="btn btn-outline" href="/onde-atendemos/"> Ver regiões atendidas </a> 
-                </div> 
-                <div class="hero-proof"> <span><b>✓</b> {{ site.experiencia }}</span> <span><b>✓</b> Atendimento residencial e comercial</span> <span><b>✓</b> Orçamento via WhatsApp</span> </div> </div> 
-                <div class="institutional-hero-card reveal"> <img src="/assets/img/hero-controle-pragas.webp" alt="Controle profissional de pragas em São Paulo"> <div class="institutional-card-caption"> <strong>Dedetização em São Paulo</strong> <span>Atendimento para casas, apartamentos, condomínios, restaurantes e empresas.</span> </div> </div> </div> </section> 
-                <section class="section"> <div class="container"> <div class="section-head reveal"> <span class="eyebrow">Serviços principais</span> <h2>Soluções para proteger seu imóvel.</h2> <p class="lead"> Cada infestação exige uma análise adequada. Por isso, a ImuniziPrag orienta o cliente e indica o procedimento mais adequado para o tipo de praga e ambiente. </p> </div> <div class="institutional-card-grid"> <article class="institutional-service-card reveal"> <span>01</span> <h3>Dedetização</h3> <p>Controle de baratas, formigas, pulgas, carrapatos, traças, escorpiões, percevejos de cama e outras pragas urbanas.</p> </article> <article class="institutional-service-card reveal"> <span>02</span> <h3>Desratização</h3> <p>Controle de ratos e roedores em casas, condomínios, empresas, restaurantes, áreas externas, garagens e depósitos.</p> </article> <article class="institutional-service-card reveal"> <span>03</span> <h3>Descupinização</h3> <p>Tratamento contra cupins em móveis, portas, batentes, rodapés, estruturas de madeira e pontos de infestação.</p> </article> </div> </div> </section> 
-                <section class="section institutional-band"> 
-                 <div class="container institutional-split"> 
-                  <div class="reveal"> <span class="eyebrow">Onde atendemos</span> 
-                   <h2>Equipe disponível para São Paulo e região.</h2> 
-                   <p class="lead"> A ImuniziPrag atende diferentes regiões de São Paulo, com foco em imóveis residenciais, condomínios, restaurantes, clínicas, comércios e empresas. </p> 
-                   <a class="btn btn-primary" href="/onde-atendemos/"> Ver bairros atendidos </a> </div> 
-                   <div class="institutional-list reveal"> 
-                    <a href="/dedetizadora-vila-mariana/">Vila Mariana</a> 
-                    <a href="/dedetizadora-campo-belo/">Campo Belo</a> 
-                    <a href="/dedetizadora-moema/">Moema</a> 
-                    <a href="/dedetizadora-brooklin/">Brooklin</a> 
-                    <a href="/dedetizadora-santo-amaro/">Santo Amaro</a> 
-                    <a href="/dedetizadora-pinheiros/">Pinheiros</a> 
-                    <a href="/dedetizadora-morumbi/">Morumbi</a> 
-                    <a href="/dedetizadora-lapa/">Lapa</a>  
-                    <a href="/dedetizadora-santana/">Santana</a> 
-                    <a href="/dedetizadora-mooca/">Mooca</a> 
-                    <a href="/dedetizadora-tatuape/">Tatuapé</a> 
-                    <a href="/dedetizadora-bras/">Brás</a> 
-                    </div>
-                    </div> 
-                   </div> </section> 
-                    <section class="final-cta" data-bg="IMUNIZIPRAG"> <div class="container cta-grid"> <div> <h2>Precisa de controle de pragas agora?</h2> <p> Fale com a ImuniziPrag pelo WhatsApp, informe o tipo de praga e receba orientação para o atendimento no seu imóvel. </p> </div> <div> <a class="btn btn-primary" href="https://wa.me/{{ site.whatsapp }}?text=Olá%2C%20preciso%20de%20atendimento%20para%20controle%20de%20pragas." target="_blank" rel="noopener" > Falar com especialista </a> </div> </div> </section>
+---
+layout: layouts/base.njk
+title: "Hidroval Caça Vazamento | Detecção de Vazamentos em [CIDADE]"
+description: "Detecção e reparo de vazamentos de água em [CIDADE] com geofone e sem quebra-quebra. Atendimento para casas, apartamentos, condomínios e empresas."
+permalink: "/"
+---
+
+<section class="institutional-hero">
+  <div class="container institutional-hero-grid">
+    <div class="institutional-hero-copy reveal">
+      <span class="local-tag"><i></i> Caça vazamento em {{ site.cidade }}</span>
+
+      <h1>Encontramos o vazamento sem quebrar a sua casa</h1>
+
+      <p class="lead">
+        A {{ site.empresa }} localiza vazamentos de água ocultos com geofone e outros equipamentos de detecção, para residências, condomínios, comércios e empresas em {{ site.cidade }}.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsappMensagem | urlencode }}" target="_blank" rel="noopener">
+          Pedir orçamento
+        </a>
+
+        <a class="btn btn-outline" href="/servicos/">
+          Ver serviços
+        </a>
+      </div>
+
+      <div class="hero-proof">
+        <span><b>✓</b> Detecção com geofone</span>
+        <span><b>✓</b> Sem quebra-quebra</span>
+        <span><b>✓</b> Orçamento via WhatsApp</span>
+      </div>
+    </div>
+
+    <div class="institutional-hero-card reveal">
+      <div class="media-placeholder" role="img" aria-label="{{ site.empresa }}">
+        <span>[IMG: hero-home.jpg]</span>
+      </div>
+
+      <div class="institutional-card-caption">
+        <strong>Caça vazamento em {{ site.cidade }}</strong>
+        <span>Atendimento para casas, apartamentos, condomínios e empresas.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Serviços principais</span>
+      <h2>Soluções para cada tipo de vazamento.</h2>
+      <p class="lead">
+        Cada vazamento tem uma causa. Por isso, a Hidroval confirma a perda de água, localiza o ponto exato e orienta o reparo mais adequado.
+      </p>
+    </div>
+
+    <div class="institutional-card-grid">
+      {% for item in servicos %}
+        <article class="institutional-service-card reveal">
+          {% if item.foto %}
+            <img class="card-photo" src="{{ item.foto }}" alt="{{ item.fotoAlt }}" width="800" height="498" loading="lazy">
+          {% endif %}
+          <span>{{ "0" + loop.index if loop.index < 10 else loop.index }}</span>
+          <h3><a href="/{{ item.slug }}/">{{ item.nome }}</a></h3>
+          <p>{{ item.resumo }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section institutional-band">
+  <div class="container institutional-split">
+    <div class="reveal">
+      <span class="eyebrow">Onde atendemos</span>
+      <h2>Atendimento em {{ site.cidade }} e região.</h2>
+      <p class="lead">
+        A Hidroval atende imóveis residenciais, condomínios, comércios e empresas em diferentes bairros de {{ site.cidade }}.
+      </p>
+      <a class="btn btn-primary" href="/onde-atendemos/">Ver bairros atendidos</a>
+    </div>
+
+    <div class="institutional-list reveal">
+      {% for item in bairros %}
+        <a href="/{{ item.slug }}/">{{ item.nome }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="final-cta" data-bg="HIDROVAL">
+  <div class="container cta-grid">
+    <div>
+      <h2>Suspeita de vazamento?</h2>
+      <p>
+        Fale com a Hidroval pelo WhatsApp, conte o que está acontecendo e receba orientação para localizar o vazamento no seu imóvel.
+      </p>
+    </div>
+
+    <div>
+      <a class="btn btn-primary" href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsappMensagem | urlencode }}" target="_blank" rel="noopener">
+        Falar com especialista
+      </a>
+    </div>
+  </div>
+</section>

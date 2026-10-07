@@ -1,7 +1,7 @@
 <header class="header">
   <div class="container nav">
     <a class="brand" href="/" aria-label="{{ site.empresa }} - página inicial">
-      <img src="/assets/img/logo-imuniziprag.webp" alt="{{ site.empresa }}">
+      <img src="/assets/img/hidroval-logo-azul.webp" alt="{{ site.empresa }}" width="600" height="202">
     </a>
 
     <nav class="nav-links" aria-label="Navegação principal">
@@ -16,7 +16,7 @@
         <strong>{{ site.telefone }}</strong>
       </a>
 
-      <a class="btn btn-primary" href="{{ menu.cta.url }}" target="_blank" rel="noopener">
+      <a class="btn btn-primary" href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsappMensagem | urlencode }}" target="_blank" rel="noopener">
         {{ menu.cta.label }}
       </a>
 
