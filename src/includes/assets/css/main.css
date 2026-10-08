@@ -664,7 +664,6 @@
 
 .institutional-hero-card {
   position: relative;
-  min-height: 520px;
   overflow: hidden;
   border-radius: 36px 0 36px 36px;
   background: var(--navy);
@@ -672,31 +671,24 @@
 }
 
 .institutional-hero-card img {
-  position: absolute;
-  inset: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
+  object-position: center;
 }
 
-.institutional-hero-card:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(2,41,95,.62), transparent 55%);
+.institutional-hero-card > .media-placeholder {
+  position: relative;
+  aspect-ratio: 4 / 3;
 }
 
+/* Mantém a legenda fora da foto para preservar a mão e o sensor. */
 .institutional-card-caption {
-  position: absolute;
-  z-index: 2;
-  right: 24px;
-  bottom: 24px;
-  left: 24px;
+  position: relative;
   padding: 22px;
-  border-radius: 18px;
   color: white;
-  background: rgba(2,41,95,.86);
-  backdrop-filter: blur(12px);
+  background: var(--navy);
 }
 
 .institutional-card-caption strong {
@@ -917,10 +909,6 @@
   .locations-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .institutional-hero-card {
-    min-height: 460px;
-  }
 }
 
 @media (max-width: 760px) {
@@ -939,7 +927,6 @@
   }
 
   .institutional-hero-card {
-    min-height: 390px;
     border-radius: 28px;
   }
 

@@ -1,6 +1,6 @@
 {
   "heroImagem": "/assets/img/hero-home.webp",
-  "heroImagemAlt": "Sala de apartamento iluminada com sofá azul e cozinha integrada ao fundo",
+  "heroImagemAlt": "Técnico de costas usando fones e sensor acústico sobre o piso intacto de uma cozinha",
   "sinais": [
     { "titulo": "Conta de água alta", "texto": "O valor subiu e a rotina da casa continua a mesma." },
     { "titulo": "Hidrômetro girando", "texto": "O relógio registra consumo com todas as torneiras fechadas." },
