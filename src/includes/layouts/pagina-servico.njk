@@ -39,15 +39,13 @@ layout: layouts/base.njk
         <img
           src="{{ servico.imagem }}"
           alt="{{ servico.imagemAlt or servico.h1 }}"
-          width="1024"
-          height="746"
+          width="{{ servico.imagemLargura or 1200 }}"
+          height="{{ servico.imagemAltura or 900 }}"
           loading="eager"
           fetchpriority="high"
         >
       {% else %}
-        <div class="media-placeholder" role="img" aria-label="{{ servico.imagemAlt or servico.h1 }}">
-          <span>[IMG: {{ servico.imagemEsperada }}]</span>
-        </div>
+        <div class="media-placeholder" role="img" aria-label="{{ servico.imagemAlt or servico.h1 }}"></div>
       {% endif %}
 
       <div class="service-hero-badge">
@@ -85,8 +83,8 @@ layout: layouts/base.njk
         <p>{{ paragrafo }}</p>
       {% endfor %}
 
-      {% if servico.foto %}
-        <img class="card-photo" src="{{ servico.foto }}" alt="{{ servico.fotoAlt }}" width="800" height="498" loading="lazy">
+      {% if servico.foto and servico.foto != servico.imagem %}
+        <img class="card-photo" src="{{ servico.foto }}" alt="{{ servico.fotoAlt }}" width="800" height="498" loading="lazy" decoding="async">
       {% endif %}
     </div>
   </div>

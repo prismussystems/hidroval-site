@@ -29,9 +29,11 @@ permalink: "/"
     </div>
 
     <div class="institutional-hero-card reveal">
-      <div class="media-placeholder" role="img" aria-label="{{ site.empresa }}">
-        <span>[IMG: hero-home.jpg]</span>
-      </div>
+      {% if home.heroImagem %}
+        <img src="{{ home.heroImagem }}" alt="{{ home.heroImagemAlt }}" width="1600" height="1200" loading="eager" fetchpriority="high">
+      {% else %}
+        <div class="media-placeholder" role="img" aria-label="{{ site.empresa }}"></div>
+      {% endif %}
 
       <div class="institutional-card-caption">
         <strong>Caça vazamento em {{ site.cidade }}</strong>
