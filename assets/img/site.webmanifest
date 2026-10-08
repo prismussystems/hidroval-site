@@ -1,0 +1,19 @@
+{
+  "name": "Hidroval Caça Vazamento",
+  "short_name": "Hidroval",
+  "icons": [
+    {
+      "src": "/assets/img/icone_192px.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icone_512px.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#02295F",
+  "background_color": "#FFFFFF",
+  "display": "standalone"
+}

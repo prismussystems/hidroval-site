@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hidrovalcacavazamentos.com.br/sitemap.xml
